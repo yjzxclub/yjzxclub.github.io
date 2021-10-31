@@ -129,7 +129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,6 +174,438 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/facb06d8b4e3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/facb06d8b4e3/" class="post-title-link" itemprop="url">HTML：4——标签2</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-08 13:34:51" itemprop="dateCreated datePublished" datetime="2021-09-08T13:34:51+08:00">2021-09-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-26 18:53:33" itemprop="dateModified" datetime="2021-09-26T18:53:33+08:00">2021-09-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals</a></li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>现在假设我要列出Mojang Studios的几个员工，就像下面这样，该怎么做呢？</p>
+<blockquote>
+<ul>
+<li>Jens ‘Jeb’ Bergensten</li>
+<li>Nathan ‘Dinnerbone’ Adams</li>
+<li>Mikael ‘Slicedlime’ Hedberg</li>
+</ul>
+</blockquote>
+<p>代码如下，如果你要写自己的列表可以照着这个写。列表里内容数量不限，只需要再加入<code>&lt;li&gt;&lt;/li&gt;</code>即可。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Jens &#x27;Jeb&#x27; Bergensten<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Nathan &#x27;Dinnerbone&#x27; Adams<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Mikael &#x27;Slicedlime&#x27; Hedberg<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这是<strong>无序（unordered）列表</strong>。还有<strong>有序（ordered）列表</strong>：</p>
+<blockquote>
+<p>噼哩噼哩番剧排行（某年某月某日记录的）</p>
+<ol>
+<li>关于我转生变成史莱姆这档事 第二季</li>
+<li>死神少爷与黑女仆</li>
+<li>精灵幻想记</li>
+<li>转生成为了只有乙女游戏破灭Flag的邪恶大小姐 第二季</li>
+<li>侦探已死</li>
+</ol>
+</blockquote>
+<p>代码其实就是把<code>&lt;ul&gt;</code>改成<code>&lt;ol&gt;</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>噼哩噼哩番剧排行（某年某月某日记录的）<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>关于我转生变成史莱姆这档事 第二季<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>死神少爷与黑女仆<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>精灵幻想记<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>转生成为了只有乙女游戏破灭Flag的邪恶大小姐 第二季<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>侦探已死<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>有时候我们还会需要嵌套列表：</p>
+<blockquote>
+<p>Mojang Studios</p>
+<ul>
+<li>臭写代码的  <pre><code> 1. Jens &#39;Jeb&#39; Bergensten  
+ 2. Nathan &#39;Dinnerbone&#39; Adams
+</code></pre>
+</li>
+<li>画画的  <pre><code> 1. Markus &#39;Junkboy&#39; Toivonen  
+ 2. Ninni Landin
+</code></pre>
+</li>
+</ul>
+</blockquote>
+<p>代码也一样，像这里的话，就是让两个无序列表成为有序列表的一个<code>&lt;li&gt;</code>元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Mojang Studios<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>臭写代码的<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Jens &#x27;Jeb&#x27; Bergensten<span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Nathan &#x27;Dinnerbone&#x27; Adams<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>画抽象画的<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Markus &#x27;Junkboy&#x27; Toivonen<span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Ninni Landin<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你觉得看不懂的话，可以这么理解：把这一段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>臭写代码的<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Jens &#x27;Jeb&#x27; Bergensten<span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>Nathan &#x27;Dinnerbone&#x27; Adams<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>看成一个<code>这是某一段文本</code>的话，就和一个无序列表一样了。</p>
+<h2 id="再谈属性"><a href="#再谈属性" class="headerlink" title="再谈属性"></a>再谈属性</h2><p>灯只有“开”和“关”两个状态（谁要是跟我说“为什么没有‘坏’这个状态”，我直接把他宰了），如果把“开”当成<code>True</code>，“关”当成<code>False</code>，那么只有<code>True</code>和<code>False</code>的东西，我们称之为布尔变量。HTML中的属性也有<strong>布尔属性</strong>。比如说HTML中的输入框<code>&lt;input&gt;</code>，我们可以用这样的代码让他不能输入：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">disabled</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>也就是说，有的属性可以不需要打<code>=&quot;xxxx&quot;</code>这一串，这些属性就是布尔属性。它相当于一个开关，比如说这里就是把“disable”这个开关打开。</p>
+<p>还有的属性是用来辨识当前元素的。假如我开了一个网络小说网站，现在有一大堆<code>&lt;p&gt;</code>元素，其中有的是写的文章的自然段，有的是网站的一些其他文本。现在我要给所有网文自然段加上好看的Noto Sans CJK字体（当然这需要CSS），怎么让浏览器知道哪些文本应该改字体，哪些文本不需要呢？<br>我们给这些<code>&lt;p&gt;</code>元素标记一下，有的标记成“自然段”，有的不标记，浏览器就知道标记了的<code>&lt;p&gt;</code>元素需要改字体。这里就要用到HTML的一个属性——<code>class</code>。<code>class</code>就是“类”的意思。HTML的每种元素都可以带<code>class</code>属性。回到我们之前说的<code>&lt;p&gt;</code>元素：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;paragraph&quot;</span>&gt;</span>了解清楚计算机社是全学校最垃圾的社团到底是一种怎么样的存在，是解决一切问题的关键。 可是……<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注：上述文本由已经通过图灵测试的狗屁不通文章生成器生成。<br>还有，我并没有说class的属性一定要写paragraph，或者什么属性写成paragraph就会有好看的字体之类的。class属性的值是随你写的，至于有这个属性的元素到底会产生什么变化，也是你写的CSS决定的。  </p>
+<p>一个元素还可以有多个类：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;paragraph book article&quot;</span>&gt;</span>一段文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的<code>&lt;p&gt;</code>元素就有paragraph、book和article三个类。在CSS里写了每个类对应的样式之后，这段文本就会同时渲染这三种样式。（如果你问冲突了怎么办的话，请看CSS篇）</p>
+<p>还有一个和这个很像的属性，它也是任何元素都可以用的，用来找到某个特定的元素。它就是<code>id</code>。在同一个HTML里，<code>id</code>的属性值必须是唯一的。假如你写了CSS，说<code>id=&quot;title&quot;</code>的元素要加大字号，那么这个唯一的元素显示的样子就会改变。<code>id</code>还有一个用途，就是<strong>页面内跳转</strong>。（还是狗屁不通文章生成器，嘿嘿）  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>《996的自我修养》<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>第一章：什么是996？<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#charpter2&quot;</span>&gt;</span>链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>直接跳到第二章<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>996的自我修养因何而发生？ 这样看来， 带着这些问题，我们来审视一下996的自我修养。 俾斯麦说过一句富有哲理的话，失败是坚忍的最后考验。我希望诸位也能好好地体会这句话。 问题的关键究竟为何？ 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。这句话语虽然很短，但令我浮想联翩。 生活中，若996的自我修养出现了，我们就不得不考虑它出现了的事实。 带着这些问题，我们来审视一下996的自我修养。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>拉罗什福科曾经说过，我们唯一不会改正的缺点是软弱。这句话语虽然很短，但令我浮想联翩。 希腊曾经提到过，最困难的事情就是认识自己。这似乎解答了我的疑惑。 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 996的自我修养，到底应该如何实现。 带着这些问题，我们来审视一下996的自我修养。 就我个人来说，996的自我修养对我的意义，不能不说非常重大。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>一般来说， 别林斯基曾经说过，好的书籍是最贵重的珍宝。带着这句话，我们还要更加慎重的审视这个问题： 带着这些问题，我们来审视一下996的自我修养。 经过上述讨论， 一般来讲，我们都必须务必慎重的考虑考虑。 这样看来， 带着这些问题，我们来审视一下996的自我修养。 一般来讲，我们都必须务必慎重的考虑考虑。 996的自我修养，发生了会如何，不发生又会如何。 既然如何， 这样看来， 一般来说， 那么， 现在，解决996的自我修养的问题，是非常非常重要的。 所以， 总结的来说， 996的自我修养的发生，到底需要如何做到，不996的自我修养的发生，又会如何产生。 吉姆·罗恩曾经提到过，要么你主宰生活，要么你被生活主宰。带着这句话，我们还要更加慎重的审视这个问题： 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 996的自我修养因何而发生？ 就我个人来说，996的自我修养对我的意义，不能不说非常重大。 996的自我修养，发生了会如何，不发生又会如何。 俾斯麦说过一句富有哲理的话，对于不屈不挠的人来说，没有失败这回事。这启发了我， 克劳斯·莫瑟爵士说过一句富有哲理的话，教育需要花费钱，而无知也是一样。这启发了我， 莎士比亚在不经意间这样说过，抛弃时间的人，时间也抛弃他。带着这句话，我们还要更加慎重的审视这个问题： 经过上述讨论， 所谓996的自我修养，关键是996的自我修养需要如何写。 这样看来。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;#charpter2&quot;</span>&gt;</span>第二章：如何开始996<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>如果要996，你首先需要一个科技公司。取个名字，什么白渡、滕迅、啊狸叭叭都可以。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;p&gt;点击&lt;a href=&quot;#charpter2&quot;&gt;链接&lt;/a&gt;直接跳到第二章&lt;/p&gt;</code>这一句的“链接”两字会被加上超链接，点击它，文本会直接跳转到第二章。你可以自己试试。（可能由于第二章标题已经出现在了视野中，你是看不到“跳转”的，那样的话就多加点废话进去）</p>
+<h2 id="空白"><a href="#空白" class="headerlink" title="空白"></a>空白</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span> 《 好 兄 弟 》 <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span> 《       好      兄</span><br><span class="line">     弟      》 <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这两段HTML显示起来是一样的，都是：</p>
+<blockquote>
+<p>《 好 兄 弟 》  </p>
+</blockquote>
+<p>无论你在HTML元素的内容中使用多少空格(包括空白字符，包括换行)，渲染的时候，连续出现的空白符（包括回车）都会变成一个空格。没错，不管是带文本的元素之外，还是带文本的元素之内，都一样。</p>
+<blockquote>
+<p>那么为什么我们会在HTML元素的嵌套中使用那么多的空白呢? 答案就是为了可读性 —— 如果你的代码被很好地进行格式化，那么就很容易理解你的代码是怎么回事，反之就只有聚做一团的混乱.。在我们的HTML代码中，我们让每一个嵌套的元素以两个空格缩进。 你使用什么风格来格式化你的代码取决于你 (比如所对于每层缩进使用多少个空格)，但是你应该坚持使用某种风格。<br>——GCV Ctrl+C Ctrl+V 自 MDN</p>
+</blockquote>
+<h2 id="实体引用"><a href="#实体引用" class="headerlink" title="实体引用"></a>实体引用</h2><p>那我偏要打很多空格怎么办？<br>也是可以解决的。如果你打了一个<code>&amp;nbsp</code>，在解释的时候，就会变成空格。比如说这样一段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>啊&amp;nbsp&amp;nbsp&amp;nbsp这<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>它显示的时候就会有三个空格。<br>同样还有别的问题，比如说，如果要打一个尖括号呢？如果直接打，是会被当成标签的。<br><code>&amp;lt</code>就是左尖括号（小于号），<code>&amp;gt</code>就是右尖括号（大于号）。比如说这个，前一句是错的，后一句就可以显示正确的样子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>HTML 中用 <span class="tag">&lt;<span class="name">p</span>&gt;</span> 来定义段落元素。<span class="tag">&lt;/<span class="name">p</span>&gt;</span>           错的！</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>HTML 中用 <span class="symbol">&amp;lt;</span>p<span class="symbol">&amp;gt;</span> 来定义段落元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       对的！</span><br></pre></td></tr></table></figure>
+
+<p>上面这种用一串奇奇怪怪的东西代替一个字符的方式叫实体引用。这里有一个表格：  </p>
+<table>
+ <thead>
+  <tr>
+   <th scope="col">原义字符</th>
+   <th scope="col">等价字符引用</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>&lt;</td>
+   <td>&amp;lt;</td>
+  </tr>
+  <tr>
+   <td>&gt;</td>
+   <td>&amp;gt;</td>
+  </tr>
+  <tr>
+   <td>"</td>
+   <td>&amp;quot;</td>
+  </tr>
+  <tr>
+   <td>'</td>
+   <td>&amp;apos;</td>
+  </tr>
+  <tr>
+   <td>&amp;</td>
+   <td>&amp;amp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>如果你写了一段超级长的HTML，n年后维护的时候，你很有可能发现不知道你写了什么。因此，你当初需要写注释，来避免这种情况的发生。或者，你写了HTML给别人看，他看不懂你写了什么LJ玩意。这也需要你写注释。<br>浏览器不会渲染注释的内容，用户也看不到它，只有看源码的人才能看到。<br>把一段东西变成注释，只需要用<code>&lt;!--</code>和<code>--&gt;</code>把东西包起来。下面这段代码，由于第一句在注释外，第二句和第三句在注释内，所以只会显示“我在注释外！”。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我在注释外！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 我在注释内！ --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- &lt;p&gt;我也在注释内！&lt;/p&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="音视频"><a href="#音视频" class="headerlink" title="音视频"></a>音视频</h2><p>要是你可怜的网页没有音视频，大概很多人都会不感兴趣。所以，来学习嵌入音视频吧。  </p>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>由于GCVillager是_________，所以这里还是放一个__________的视频。  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你的浏览器不支持 HTML5 视频。可点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span>&gt;</span>此链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>观看<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>正常显示起来大概是这样，一个简易的播放器：</p>
+<p><img src="4_video-demo.png" alt="视频播放器">  </p>
+<p>解释一下：<code>controls</code>是<code>video</code>元素的一个属性（还是布尔属性），选了之后会多出来一个栏，让用户可以拉进度条啊，调音量之类的。<code>source</code>就是字面意思，src里面就是视频的链接，<code>type</code>属性向浏览器说明了视频的格式。由于<code>video</code>元素是HTML5加的，如果别人在用IE之类的垃圾浏览器，可能看不了你的视频。这时候，剩下的内容叫后备内容，写了它，可以让那些用户至少还能把视频下过来看（记得提醒他们换浏览器）。<br>假如你做了一个视频网站，有时候，可能你的某个小服务器维护啊之类的；或者因为mp4是有版权费的，有的浏览器买不起就不支持mp4，这时候就需要其他的视频源。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.webm&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/webm&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你的浏览器不支持 HTML5 视频。可点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span>&gt;</span>此链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>观看<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就有两个视频源了，如果第一个不行就默认第二个。你还可以写第三个第四个第五个第六个第七个第八个第九个第十个，只需要照着样子加在后面。  </p>
+<h3 id="其他视频属性"><a href="#其他视频属性" class="headerlink" title="其他视频属性"></a>其他视频属性</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">autoplay</span> <span class="attr">loop</span> <span class="attr">muted</span> <span class="attr">preload</span>=<span class="string">&quot;auto&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">poster</span>=<span class="string">&quot;poster.png&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你的浏览器不支持 HTML5 视频。可点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-video.mp4&quot;</span>&gt;</span>此链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>观看<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>width</code>和<code>height</code>：和图片差不多，就是限定大小。方便嵌入到页面的某个部分，不打乱排版。<br><code>autoplay</code>：打开页面就自动播放。（当然可能会被浏览器阻止）<br><code>loop</code>：循环播放，就是放完再放。<br><code>muted</code>：默认静音。当然用户可以自己把声音打开（如果你加了<code>controls</code>控制条的话）<br><code>poster</code>：指向一张图片的链接，在视频播放前显示，可以做预览或者广告。不过在本例中，由于自动播放的存在，大概是看不到那张图片了。<br><code>preload</code>：可以用来缓存较大的文件。这个属性有三个选项：<code>none</code>不缓冲，<code>auto</code>页面加载后缓存媒体文件，<code>metadata</code>只缓存媒体文件的元数据。  </p>
+<p>综合运用一下，假设我们要在网页靠上方的地方嵌入一个长条广告，人总是要恰饭的嘛。  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;800&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">autoplay</span> <span class="attr">loop</span> <span class="attr">muted</span> <span class="attr">preload</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;ad.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>广告加载失败。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>广告可以控制进度可能就不像广告了，所以删掉<code>controls</code>来删掉控制条。为了逼别人看，而且他浏览这个网页的时候让他一直能看到，就开<code>autoplay</code>和<code>loop</code>。广告有声音太吵了给人骂，所以静音（您做广告的时候不加声音不就好了吗？）。缓存的话……在这个例子里加和不加也没什么区别，因为自动播放了嘛，本来就是加载好就开始播放的。  </p>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>音频和视频差不多。如下：</p>
+<p>由于_________，所以__________。（不会还有人不会填这句话吧？）  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-music.mp3&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/mp3&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-music.ogg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/ogg&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你的浏览器不支持 HTML5 音频，可点击<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-music.mp3&quot;</span>&gt;</span>此链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span>收听。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如图：</p>
+<p><img src="4_audio-demo.png" alt="音频播放器"></p>
+<p>不过有一点差异：没有<code>width</code>和<code>height</code>，也没有<code>poster</code>，原因很简单吧，音频又不能看。  </p>
+<h2 id="span元素"><a href="#span元素" class="headerlink" title="span元素"></a><code>span</code>元素</h2><p>现在先假设一下，有一个CSS，它可以让你所有带<code>red</code>类的文本变成红色，而且让所有带<code>hide</code>类的文本背景变成黑色（这样黑色文字就躲在阴影里看不见了）。现在我们要有这样的效果：</p>
+<p><img src="4_span-usage.png" alt="span使用"></p>
+<p>如果直接给<code>&lt;p&gt;</code>上class，那么整个句子都会被渲染，那可不行。正确做法就是使用<code>span</code>。如下：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一段<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;red&quot;</span>&gt;</span>奇怪<span class="tag">&lt;/<span class="name">span</span>&gt;</span>的文字，<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;hide&quot;</span>&gt;</span>这里你是看不见的<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当然你自己写HTML的时候是不会显示成图片里那样子的啦，毕竟你没加CSS嘛……以后再讲。  </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/16030018f428/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/16030018f428/" class="post-title-link" itemprop="url">HTML：3——标签1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-08 13:34:50" itemprop="dateCreated datePublished" datetime="2021-09-08T13:34:50+08:00">2021-09-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-26 18:55:25" itemprop="dateModified" datetime="2021-09-26T18:55:25+08:00">2021-09-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics</a></li>
+</ul>
+<p>上回说到，我们新建了一个HTML文件并补全了一个基本框架。今天我们就要了解往<code>&lt;body&gt;</code>里塞点什么东西。  </p>
+<h2 id="段落元素：-lt-p-gt"><a href="#段落元素：-lt-p-gt" class="headerlink" title="段落元素：&lt;p&gt;"></a>段落元素：<code>&lt;p&gt;</code></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>百度公司已于2021年2月31日倒闭<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>如果持续亏损，腾讯将于2022年2月30日宣布破产<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：  </p>
+<blockquote>
+<p>百度公司已于2021年2月31日倒闭<br>如果持续亏损，腾讯将于2022年2月30日宣布破产  </p>
+</blockquote>
+<p>可以看出，<code>&lt;p&gt;</code>元素可以嵌套。它表示段落的开始，所以说如果你要写一篇小说，每一个自然段都可以用它括起来。<br>另外，第二行和第三行前面似乎有缩进。这并不是必须的，但是我们依然建议打。它可以直观地表明里面的两组<code>&lt;p&gt;&lt;/p&gt;</code>元素属于外层。这样就能方便阅读代码。打缩进的方式就是按键盘的Tab键。<br>比如说我们的yjzx-site的一个页面，像这样的缩进就是比较美观的。<br><img src="3_good-indent.png" alt="缩进范例">  </p>
+<h2 id="行内元素和块级元素"><a href="#行内元素和块级元素" class="headerlink" title="行内元素和块级元素"></a>行内元素和块级元素</h2><p>我们看看这两组语句：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>AMD YES!<span class="tag">&lt;/<span class="name">p</span>&gt;</span> <span class="tag">&lt;<span class="name">p</span>&gt;</span>NVIDIA NO!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>AMD YES!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>NVIDIA NO!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示结果是一样的，都是：</p>
+<blockquote>
+<p>AMD YES!<br>NVIDIA NO!</p>
+</blockquote>
+<p>下面这两组的显示效果也是一样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span>LINUX YES!<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">strong</span>&gt;</span>WINDOWS NO!<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span>LINUX YES!<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span>WINDOWS NO!<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>它们显示起来都是：</p>
+<blockquote>
+<p><strong>LINUX YES!WINDOWS NO!</strong></p>
+</blockquote>
+<p>首先需要说明一点，可以看出，HTML显示的时候是否换行，不是根据你的文件里是否有换行决定的。那么为什么写<code>&lt;p&gt;</code>元素的时候，两段之间会有换行，写<code>&lt;strong&gt;</code>元素的时候就没有呢？<br><code>&lt;p&gt;</code>元素是<strong>块级元素</strong>，自成一块，所以会换行；而<code>&lt;strong&gt;</code>元素是<strong>内联元素</strong>（行内元素），不换行。块级元素内能包含文本、块级元素和内联元素，而内联元素里只能有文本或者内联元素。<br>比如这样的一句，因为<code>&lt;strong&gt;</code>是内联元素，<code>&lt;p&gt;</code>是块级元素，虽然它能渲染出你想要的样子（给里面的东西加强调），但是这是浏览器绞尽脑汁才理解出来的，这不太好。这样的写法是错误的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span>                   BAD!!!</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>你对得起我们吗！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>RNM，退钱！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>常见的内联元素有：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>、<span class="tag">&lt;<span class="name">a</span>&gt;</span>、<span class="tag">&lt;<span class="name">img</span>&gt;</span>、<span class="tag">&lt;<span class="name">input</span>&gt;</span>、<span class="tag">&lt;<span class="name">textarea</span>&gt;</span>、<span class="tag">&lt;<span class="name">select</span>&gt;</span>、<span class="tag">&lt;<span class="name">label</span>&gt;</span>、<span class="tag">&lt;<span class="name">br</span>&gt;</span>、<span class="tag">&lt;<span class="name">b</span>&gt;</span>、<span class="tag">&lt;<span class="name">strong</span>&gt;</span>、<span class="tag">&lt;<span class="name">sup</span>&gt;</span> 、<span class="tag">&lt;<span class="name">sub</span>&gt;</span>、<span class="tag">&lt;<span class="name">i</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">del</span>&gt;</span>、<span class="tag">&lt;<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>常见的块级元素有：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>、<span class="tag">&lt;<span class="name">table</span>&gt;</span>、<span class="tag">&lt;<span class="name">form</span>&gt;</span>、<span class="tag">&lt;<span class="name">p</span>&gt;</span>、<span class="tag">&lt;<span class="name">ul</span>&gt;</span>、<span class="tag">&lt;<span class="name">h1</span>&gt;</span>-<span class="tag">&lt;<span class="name">h6</span>&gt;</span>、<span class="tag">&lt;<span class="name">hr</span>&gt;</span>、<span class="tag">&lt;<span class="name">pre</span>&gt;</span>、<span class="tag">&lt;<span class="name">address</span>&gt;</span>、<span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="lt-hr-gt-分割线与-lt-br-gt-换行"><a href="#lt-hr-gt-分割线与-lt-br-gt-换行" class="headerlink" title="&lt;hr&gt;分割线与&lt;br&gt;换行"></a><code>&lt;hr&gt;</code>分割线与<code>&lt;br&gt;</code>换行</h2><p>之前我们讲了<code>&lt;hr&gt;</code>元素是一个空元素，作用是形成分割线。而<code>&lt;br&gt;</code>元素也是空元素，它能形成换行。<br>举个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我不知道！<span class="tag">&lt;<span class="name">br</span>&gt;</span>我真的不知道！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果就是：</p>
+<blockquote>
+<p>我不知道！<br>我真的不知道！</p>
+</blockquote>
+<p>当你认为在当前语境下需要换行，又不应该开一个新段落的时候，就可以使用<code>&lt;br&gt;</code>。  </p>
+<h2 id="斜体、粗体和语义"><a href="#斜体、粗体和语义" class="headerlink" title="斜体、粗体和语义"></a>斜体、粗体和语义</h2><p>之前我们说到，<code>&lt;strong&gt;</code>元素表示文本重要性，会让文本加粗。但是HTML里还有一个<code>&lt;b&gt;</code>元素，也能让文本加粗。还有：<code>&lt;em&gt;</code>让文本变成斜体，<code>&lt;i&gt;</code>也让文本斜体，还有一个<code>&lt;cite&gt;</code>也让文本变成斜体。那么为什么会有多个效果一样的标签呢？<br>在HTML的早期，只有<code>&lt;i&gt;</code>和<code>&lt;b&gt;</code>。然而在HTML后面的标准里加入了<code>&lt;strong&gt;</code>和<code>&lt;em&gt;</code>等。这强调的一点就是“语义”。</p>
+<blockquote>
+<p>对于&lt;em&gt;、&lt;cite&gt;和&lt;i&gt;，默认情况下，它们的视觉效果是一样的。但语义是不同的。 &lt;em&gt; 标签表示其内容的着重强调，而 &lt;i&gt; 标签表示从正常散文中区分出的文本，例如外来词，虚构人物的思想，或者当文本指的是一个词语的定义，而不是其语义含义。（作品的标题，例如书籍或电影的名字，应该使用 &lt;cite&gt;。）<br>这意味着，正确使用哪一个取决于具体的场景。两者都不是纯粹为了装饰的目的，那是CSS样式所做的。<br>一个 &lt;em&gt; 的例子可能是：”Just <em>do</em> it already!”，或：”We had to do something about it”。人或软件在阅读文本时，会对斜体字的发音使用重读强调。<br>一个 &lt;i&gt; 的例子可能是：”The <em>Queen Mary</em> sailed last night”。在这里，没有对 “Queen Mary” 这个词添加强调或重要性。它只是表明，谈论的对象不是一个名叫玛丽的女王，而是一艘名字叫玛丽的船。另一个 &lt;i&gt; 的例子可能是：”The word <em>the</em> is an article”。  </p>
+</blockquote>
+<p>另外，“em”是“emphasis”（强调）的缩写。</p>
+<p>同理，<code>&lt;strong&gt;</code>表示文本的重要性；而<code>&lt;b&gt;</code>只是加粗。  </p>
+<blockquote>
+<p>strong是一个逻辑状态，而bold是一个物理状态。逻辑状态分离内容和表现形式，使用逻辑状态允许你用各种不同的方式来表达。比如你想把文字渲染成红色，使用其它大小的字体、带有下划线或其他样式，而不是加粗的样式。必须要理解使用strong呈现出的表现形式不同于单纯的加粗。 因为bold是一个物理状态，他没有区分表现形式和内容。如果让bold做了加粗文本外的其它任何事情，都将会令人困惑而且也不符合逻辑。<br>同样应该注意&lt;b&gt;&lt;/b&gt; 还有其他用途，比如想单纯地吸引注意而不增加其重要性。</p>
+</blockquote>
+<p>上面引用的那一段看不懂就算了。总之：如果斜体是有强调意义的，应该使用<code>&lt;em&gt;</code>；如果为表示作品的标题而斜体，应该使用<code>&lt;cite&gt;</code>；如果既不是作品也不是强调，才应该用<code>&lt;i&gt;</code>。同样：如果加粗是说明重要性的，应该使用<code>&lt;strong&gt;</code>；如果情况不适合用<code>&lt;strong&gt;</code>（即没有重要性的含义），再使用<code>&lt;b&gt;</code>。  </p>
+<p>那么<code>&lt;em&gt;</code>和<code>&lt;strong&gt;</code>又有什么区别呢？</p>
+<blockquote>
+<p>在 HTML4 时， Strong 简单地表示一个更强的强调(emphasis)，而在HTML5中，这个元素被描述为表征“内容强烈的重要性(strong importance for its contents) ”。这是一个重要的区别。Em标签(Emphasis)用于改变一个句子的意思(比如”我&lt;em&gt;喜欢&lt;/em&gt;胡萝卜” 和”我喜欢&lt;em&gt;胡萝卜&lt;/em&gt;”，分别强调喜欢和胡萝卜), Strong用来对一个句子的部分增加重要性(比如 “警告! 这非常危险。”) Strong和Emphasis都可以分别通过嵌套来增加相对重要性或强调重点。</p>
+</blockquote>
+<p>看不懂就算了，我也不想看懂。  </p>
+<p>可是为什么要区别这些元素呢？其一，使用CSS渲染后，它可能会有不同的显示效果（是否不同取决于CSS写了什么）；对于搜索引擎和浏览器，明确的语义可以更好地组织数据；对于使用屏幕阅读器（一种朗读网页的程序）的视障患者，屏幕阅读器能更好地处理重读，让他们更好地理解网页。<br>HTML5尤其注重语义，我们之后会学习很多语义化的元素，许多都是HTML5新加的。  </p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown有6级标题，HTML也一样。使用方法是<code>&lt;h1&gt;</code>~`<h6>`包围标题内容。上示例：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一个教程<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>我是第一个副标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>教程的第一段<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>我也是副标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>教程的第二段<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>教程的第三段<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<blockquote>
+<h1 id="我是一个教程"><a href="#我是一个教程" class="headerlink" title="我是一个教程"></a>我是一个教程</h1><h2 id="我是第一个副标题"><a href="#我是第一个副标题" class="headerlink" title="我是第一个副标题"></a>我是第一个副标题</h2><p>教程的第一段  </p>
+<h2 id="我也是副标题"><a href="#我也是副标题" class="headerlink" title="我也是副标题"></a>我也是副标题</h2><p>教程的第二段<br>教程的第三段</p>
+</blockquote>
+<p>其他的也没什么好讲的。但是请注意：<code>&lt;h1&gt;</code>~`<h6>`的元素也是有语义的，它就表示标题，不能是别的。如果单纯为了增大字号而使用标题元素，是完全错误的。比如这样子，就是错误的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>华强：你这瓜保熟吗？<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>老板：我开水果摊的，能卖给你生瓜蛋子？<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>华强：我问你这瓜保熟吗？<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>老板：你是故意找茬，是不是？你要不要吧！<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>         BAD!!!</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>华强：你这瓜要是熟我肯定要啊<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然老板的话被放大了（也许这是你想要的），但是它不符合语义。搜索引擎可能会把它当做小标题，显示在搜索页上，忽略掉前后的部分，于是你的网站在搜索引擎上的预览会变得很奇怪。如果要改字号，请使用我们后面讲的CSS。</p>
+<h2 id="图像元素：-lt-img-gt"><a href="#图像元素：-lt-img-gt" class="headerlink" title="图像元素：&lt;img&gt;"></a>图像元素：<code>&lt;img&gt;</code></h2><p>之前讲过，<code>&lt;img&gt;</code>元素可以显示一张图片。现在好好讲一讲它。  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://yjzx-site.github.io/img/club-file/scissor-seven-picture.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;一张伍六七的图片&quot;</span> <span class="attr">width</span>=<span class="string">&quot;960px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;540px&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>由于GCVillager是__________，所以这里还是放那张__________。<br>首先回顾一下，src、alt等都是属性，用空格分隔。属性值最好用引号括起来，否则可能出错（单双引号都可以，但是前后必须一致。比如说，<code>alt=&quot;一张伍六七的图片&#39;</code>就是错误的，浏览器可能无法理解。）接着我们来了解一下各个属性。  </p>
+<h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><p>src是source的缩写，很好理解，就是图片的链接。链接可以是<strong>相对路径</strong>，也可以是<strong>绝对路径</strong>。举个例子，“我们机房隔壁是广播室”，这就是相对路径；而“广播室在浙江省永嘉县永嘉中学图书馆4楼四零几室”就是绝对路径。<br>比如说，假设<code>scissor-seven-picture.jpg</code>和你的HTML在同一个路径下（也就是同一个文件夹内），你的src就可以直接写<code>scissor-seven-picture.jpg</code>。<br>那要是这个文件在一个叫img的文件夹内，而img和你的网页同目录（文件夹）（如下图）呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--html（文件夹）  </span><br><span class="line">    --index.html  </span><br><span class="line">    --img（文件夹）  </span><br><span class="line">        --scissor-seven-picture.jpg</span><br></pre></td></tr></table></figure>
+
+<p>那就输入<code>img/scissor-seven-picture.jpg</code>。<br>上面这两个就属于相对路径表示法。而像<code>https://yjzx-site.github.io/img/club-file/scissor-seven-picture.jpg</code>这样的路径就是绝对路径。可以这么说：最前面写了<code>https://</code> 和域名的就是绝对路径，如果没有写，那就是相对路径。<br>在相对路径表示法里，还有<code>.</code>和<code>..</code>。<code>.</code>代表当前路径，所以<code>./a.png</code>和<code>a.png</code>代表的是同一个东西。<code>..</code>代表上层目录，比如说你的某个文件是<code>https://amdyes.net/docs/index.html</code>，同路径下有一个<code>a.png</code>，那么对<code>index.html</code>来说，<code>a.png</code>和<code>../docs/a.png</code>是同一个文件。<br>使用怎样的表示法，看具体情况。比如你的网站结构里，这些东西可能就是在同一个路径下的，那使用相对路径会比较方便，而且如果你换了自己网站的域名，也不容易出现图片无法显示的问题（比如说，你的网站叫yjzx.club，后来换成了yjzx.com，因为你的图片链接原先是<code>https://yjzx.club/a.png</code>，就会出现找不到图片的情况；但是相对路径就不会）；如果你的图片在别的网站上，那就必须用绝对路径。</p>
+<h3 id="alt"><a href="#alt" class="headerlink" title="alt"></a>alt</h3><p>如果因为图片炸了，或者是视障人员，就需要使用alt属性。如果写了<code>alt=&quot;一张伍六七的图片&quot;</code>，并且图片炸了（比如说我们倒闭了），就会显示alt里的内容，而如果能够显示图片，就不会显示alt的内容。但是使用屏幕阅读器的人可能需要听alt里的内容。<br>图片加载不出来就会这样：</p>
+<blockquote>
+<p><img src="www.baidu.com" alt="一张伍六七的图片">  </p>
+</blockquote>
+<p>为了让人在看不见图片的情况下就能了解内容，应该讲内容写成描述性文本。比如说，其实这里不应该写“一张伍六七的图片”，最好写成“伍六七和梅花十三坐在庙里”。  </p>
+<h3 id="width-height"><a href="#width-height" class="headerlink" title="width height"></a>width height</h3><p><code>width=&quot;960px&quot; height=&quot;540px&quot;</code>的意思就是讲图片的宽度定为960<strong>像素</strong>（pixel），高度定为540像素。<br>像素是什么？假设有一张画，你将它分割成很多个很小的格子，然后用一种颜色概括一个格子；在另一张一样的纸上画一样的网格，把刚刚用来概括的颜色填到相应的格子里，稍微远一点的地方看，两张画理论上是差不多的。这种小格子就是像素。1像素是边长0.04cm的正方形小格子，图片<strong>分辨率</strong>是<code>1920*1080</code>，意思就是有1920乘1080个像素。分辨率越高，图片越清晰。<br>浏览器显示的时候，会按照图片分辨率显示。有时候，图片可能对你的要求来说太大了，或者太小了，或者你想要把图片压扁，就可以使用<code>witdh</code>和<code>height</code>。  </p>
+<h2 id="链接元素：-lt-a-gt"><a href="#链接元素：-lt-a-gt" class="headerlink" title="链接元素：&lt;a&gt;"></a>链接元素：<code>&lt;a&gt;</code></h2><p><code>&lt;a&gt;</code>元素就是链接元素。它可以添加一个超链接。“a”是“anchor”（锚）的缩写。下面是<code>&lt;a&gt;</code>元素的模板：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;某个网址&quot;</span>&gt;</span>一些文本<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>比如说我想要在某个页面中链接到我们的博客，显示如下的效果（超链接可点）：</p>
+<blockquote>
+<p>欢迎访问<a href="https://yjzxclub.github.io/">我们的博客</a>以获取更多信息。</p>
+</blockquote>
+<p>就应该这么写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>欢迎访问<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://yjzxclub.github.io&quot;</span>&gt;</span>我们的博客<span class="tag">&lt;/<span class="name">a</span>&gt;</span>以获取更多的信息。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>另外，<code>href</code>是超文本引用（ <strong>h</strong>ypertext <strong>ref</strong>erence）的缩写。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
