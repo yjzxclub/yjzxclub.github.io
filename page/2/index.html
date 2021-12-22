@@ -129,20 +129,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -174,6 +174,271 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/f34abea8d274/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/f34abea8d274/" class="post-title-link" itemprop="url">CSS 进阶——字体 颜色 多列布局</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-16 20:11:04" itemprop="dateCreated datePublished" datetime="2021-09-16T20:11:04+08:00">2021-09-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-29 12:42:06" itemprop="dateModified" datetime="2021-09-29T12:42:06+08:00">2021-09-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals</a></li>
+</ul>
+<p>本文基于 CC-BY-SA 4.0 协议发布。</p>
+<h2 id="再谈字体"><a href="#再谈字体" class="headerlink" title="再谈字体"></a>再谈字体</h2><p>正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 <code>&lt;br&gt;</code> 元素。</p>
+<p>用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。</p>
+<ul>
+<li><strong>字体样式</strong>: 作用于字体的属性，会直接应用到文本中，比如使用哪种字体，字体的大小是怎样的，字体是粗体还是斜体，等等。</li>
+<li><strong>文本布局风格</strong>: 作用于文本的间距以及其他布局功能的属性，比如，允许操纵行与字之间的空间，以及在内容框中，文本如何对齐。</li>
+</ul>
+<h2 id="字体颜色"><a href="#字体颜色" class="headerlink" title="字体颜色"></a>字体颜色</h2><p>在 CSS 里面，指定字体颜色的是 <code>color</code> 属性。严格来讲，<code>color</code> 设置的是前景内容，设置元素背景颜色要用 <code>background-color</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段用来设置<code>&lt;p&gt;</code>中的字体颜色为红色。</p>
+<h2 id="字体种类"><a href="#字体种类" class="headerlink" title="字体种类"></a>字体种类</h2><p>要在你的文本上设置一个不同的字体，你可以使用 font-family  属性，这个允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 default font. 下面是一个简单的例子:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段语句使所有在页面上的段落都采用 arial 字体，这个字体可在任何电脑上找到。</p>
+<h3 id="网页安全字体"><a href="#网页安全字体" class="headerlink" title="网页安全字体"></a>网页安全字体</h3><p>网页安全字体，就是保证绝大多数设备都可以正常显示的字体。这样可以防止你的网页在别人电脑上显示的字体出问题。</p>
+<p>实际的 Web 安全字体列表将随着操作系统的发展而改变，但是可以认为下面的字体是网页安全的。所以建议可以尽可能使用这些。</p>
+<table>
+<thead>
+<tr>
+<th>字体名称</th>
+<th>泛型</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Arial</td>
+<td>sans-serif</td>
+<td>通常认为最佳做法还是添加 Helvetica 作为 Arial 的首选替代品，尽管它们的字体面几乎相同，但 Helvetica 被认为具有更好的形状，即使Arial更广泛地可用。</td>
+</tr>
+<tr>
+<td>Courier New</td>
+<td>monospace</td>
+<td>某些操作系统有一个 Courier New 字体的替代（可能较旧的）版本叫Courier。使用Courier New作为Courier的首选替代方案，被认为是最佳做法。</td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>serif</td>
+<td></td>
+</tr>
+<tr>
+<td>Times New Roman</td>
+<td>serif</td>
+<td>某些操作系统有一个 Times New Roman 字体的替代（可能较旧的）版本叫 Times。使用Times作为Times New Roman的首选替代方案，被认为是最佳做法。</td>
+</tr>
+<tr>
+<td>Trebuchet MS</td>
+<td>sans-serif</td>
+<td>您应该小心使用这种字体——它在移动操作系统上并不广泛。</td>
+</tr>
+<tr>
+<td>Verdana</td>
+<td>sans-serif</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="默认字体"><a href="#默认字体" class="headerlink" title="默认字体"></a>默认字体</h3><p>CSS 定义了 5 个常用的字体名称:  <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code>,和 <code>fantasy</code>. 这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 <code>serif</code>, <code>sans-serif</code> 和 <code>monospace</code> 是比较好预测的，默认的情况应该比较合理，另一方面，<code>cursive</code> 和 <code>fantasy</code> 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。</p>
+<p>五个名称定义如下：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>serif</td>
+<td>有衬线的字体 （衬线一词是指字体笔画尾端的小装饰，存在于某些印刷体字体中）</td>
+</tr>
+<tr>
+<td>sans-serif</td>
+<td>没有衬线的字体。</td>
+</tr>
+<tr>
+<td>monospace</td>
+<td>每个字符具有相同宽度的字体，通常用于代码列表。</td>
+</tr>
+<tr>
+<td>cursive</td>
+<td>用于模拟笔迹的字体，具有流动的连接笔画。</td>
+</tr>
+<tr>
+<td>fantasy</td>
+<td>用来装饰的字体</td>
+</tr>
+</tbody></table>
+<h3 id="字体栈"><a href="#字体栈" class="headerlink" title="字体栈"></a>字体栈</h3><p>我们也常常使用逗号来分割字体，这样当第一个字体找不到的时候，会依次找下一个字体，直到找到为止。这叫字体栈。</p>
+<p>一般情况下，我们会采取直接给 <code>&lt;html&gt;</code> 指定字体的方式来网指定字体,这样页面上的所有文字都继这个属性，然后整个页面的字体都会同时设置。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Noto Sans SC&quot;</span>, <span class="string">&quot;Source Han Sans CN&quot;</span>, <span class="string">&quot;MicroSoft YaHei&quot;</span>, sans-serif;</span><br><span class="line">  <span class="comment">/*前两个思源黑体，第三个微软雅黑，最后是无衬线类。*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><h3 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h3><p>我们之前就已经讲过调整字体大小了，不过在这里我们详细讲清楚，理清一些误区。设置字体大小通常有这些方法：</p>
+<ul>
+<li><code>px</code> 将像素的值赋予给你的文本。这是一个绝对单位， 它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。一般不推荐使用。</li>
+<li><code>em</code> 设置相对<strong>父元素</strong>的字节大小，推荐使用。注意这不是直接相对浏览器本身的字节大小，而是自己的父元素。也就是如果你给一个段落设置成了 <code>1.2em</code> ，它的子元素设置 <code>1em</code> 就是相对 <code>1.2em</code> 而言的。</li>
+<li><code>rem</code> 相对根元素大小。这个可以避免上面提到的嵌套问题，而是直接相对浏览器本身的字节大小。</li>
+</ul>
+<h3 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h3><p><code>font-style</code>: 用来打开和关闭文本 <code>italic</code> (斜体)。 可能的值如下： <code>normal</code> : 将文本设置为普通字体 (将存在的斜体关闭) ，<code>italic</code>: 如果当前字体的斜体版本可用，那么文本设置为斜体版本；如果不可用，那么会将文字倾斜来模拟 <code>italics</code> 。你很少会用到这个属性，除非你因为一些理由想将斜体文字关闭斜体状态。</p>
+<p><code>font-weight</code>: 设置文字的粗体大小。这里有很多值可选 (比如 <code>light</code>, <code>normal</code>, <code>bold</code>, <code>extrabold</code>, <code>black</code>, 等等), 不过事实上你很少会用到 <code>normal</code> 和 <code>bold</code> 以外的值。其中 <code>normal</code> 设置正常字体，<code>bold</code> 设置粗体。</p>
+<p><code>text-decoration</code>: 设置/取消字体上的文本装饰 (你将主要使用此方法在设置链接时取消设置链接上的默认下划线。) 可用值为： <code>none</code> （取消已经存在的任何文本装饰），<code>underline</code>（文本下划线），<code>overline</code>（文本上划线） ，<code>line-through</code>（删除线）。</p>
+<h2 id="文本布局"><a href="#文本布局" class="headerlink" title="文本布局"></a>文本布局</h2><p>有了基本的字体属性，我们来看看我们可以用来影响文本布局的属性。</p>
+<h3 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h3><p>text-align 属性用来控制文本如何和它所在的内容盒子对齐。可用值如下，并且在与常规文字处理器应用程序中的工作方式几乎相同：</p>
+<ul>
+<li><code>left</code>: 左对齐文本。</li>
+<li><code>right</code>: 右对齐文本。</li>
+<li><code>center</code>: 居中文字</li>
+<li><code>justify</code>: 使文本展开，改变单词之间的差距，使所有文本行的宽度相同。你需要仔细使用，它可以看起来很可怕。特别是当应用于其中有很多长单词的段落时。如果你要使用这个，你也应该考虑一起使用别的东西，比如 <code>hyphens</code> ，打破一些更长的词语。</li>
+</ul>
+<p>如果我们应用 <code>text-align: center;</code> 到一个页面的 <code>&lt;h1&gt;</code> 元素中，结果如下：</p>
+<p><img src="3_center.png"></p>
+<h3 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h3><p> <code>line-height</code> 属性设置文本每行之间的高，可以接受大多数单位，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 <code>font-size</code> (字体大小)来获得 <code>line-height</code> 行高）。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">line-height: 1.5;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字母和单词间距"><a href="#字母和单词间距" class="headerlink" title="字母和单词间距"></a>字母和单词间距</h3><p><code>letter-spacing</code> 和 <code>word-spacing</code> 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，尤其是中文的网站下面，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位。</p>
+<p>所以作为例子，如果我们把这个样式应用到我们的示例中的 <code>&lt;p&gt;</code> 段落的第一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p::first-line &#123;</span><br><span class="line">  letter-spacing: 2px;</span><br><span class="line">  word-spacing: 4px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="3_word-spacing.png"></p>
+<h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p>以上属性让你了解如何开始在网页上设置文本，但是你可以使用更多的属性。我们只是想介绍最重要的。你也可以通过 MDN 文档去了解其他更多的属性，然后自己试着用上。</p>
+<h2 id="再谈颜色和背景"><a href="#再谈颜色和背景" class="headerlink" title="再谈颜色和背景"></a>再谈颜色和背景</h2><p>我们之前已经了解过颜色了，不过都没有单独拎出来讲过，所以这里给大家单独讲下。</p>
+<p>我们在 CSS 里面用的最多的就是前景色（<code>color</code>）和背景色( <code>background-color</code> )。前景色通常用来指定文本的颜色，背景色通常用来指定块元素的背景颜色。下面是一个例子，形成了黑底灰字。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: grey;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="3_color-example.png"></p>
+<h2 id="颜色设置方式"><a href="#颜色设置方式" class="headerlink" title="颜色设置方式"></a>颜色设置方式</h2><p>下面列举了一系列的可用的值。至于具体要设置什么颜色，那还是自己去调色盘调着上面看下有啥好看的吧，毕竟这是美术范畴，超出计算机方面了，我也无能为力。讲的还是会比较简单，有些内容会省略不讲，有兴趣可以自己看下 MDN 的文档：（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color">https://developer.mozilla.org/zh-CN/docs/Web/CSS/color</a>）</p>
+<h3 id="颜色名"><a href="#颜色名" class="headerlink" title="颜色名"></a>颜色名</h3><p>这个最简单了，具体有多少种颜色自己可以去找文档。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: red;</span><br><span class="line">color: orange;</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-进制颜色"><a href="#16-进制颜色" class="headerlink" title="16 进制颜色"></a>16 进制颜色</h3><p>由一个 <code>#</code> 打头的十六进制数字设置，符号由红色、绿色和蓝色的值组成，就是把 RGB 直接写成一个数字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: #090;</span><br><span class="line">color: #009900;</span><br></pre></td></tr></table></figure>
+
+<h3 id="rgb-和-rgba"><a href="#rgb-和-rgba" class="headerlink" title="rgb() 和 rgba()"></a>rgb() 和 rgba()</h3><p>rgb() 和 rgba() 这里两个函数在 CSS 最新标准里面是同一个东西可以指定三个 RGB 颜色值和一个可选的透明度值。不过旧的实现可能只有 rgb() 函数，而且没有透明度值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">color: rgb(34, 12, 64);</span><br><span class="line">color: rgb(34, 12, 64, 0.6);</span><br><span class="line">color: rgba(34, 12, 64, 0.6);</span><br></pre></td></tr></table></figure>
+
+<h3 id="hsl"><a href="#hsl" class="headerlink" title="hsl()"></a>hsl()</h3><p>这个好像不是特别常用，不过也是可以设置的。具体可以搜索下啥是 HSL，这里懒得讲</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: hsl(30, 100%, 50%, 0.6);</span><br><span class="line">color: hsla(30, 100%, 50%, 0.6);</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片背景"><a href="#图片背景" class="headerlink" title="图片背景"></a>图片背景</h2><p>虽然图片背景好像和这里没啥关系，不过既然提到背景了那也一起讲了，防止以后又要单独开章节补。</p>
+<p><code>background-image</code> 属性用于为一个元素设置一个或者多个背景图像。接受一个图片的 URL 作为参数。例如下面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-image:</span><br><span class="line">      url(&quot;https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;6457&#x2F;mdn_logo_only_color.png&quot;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>多列布局，通常也简写为 multicol，我们将会给出多列布局的具体例子。</p>
+<p>在下面的 HTML 里面，我们会把内容放在一个 <code>&lt;div&gt;</code> 里面，它带有一个<br><code>container</code> 类。我们会将它作为一个放置文本的容器，来进行一个展示。</p>
+<p>比方说我们举个最简单的例子，这里的 <code>column-count</code> 被设置成 <code>3</code> 意思是三列。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">column-count</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Simple multicol example<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>节约纸张<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>同上<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="3_multi3.png"></p>
+<p>除了列数，还可以通过指定每列的宽度。之前为了方便都是用 <code>px</code> 当作单位。这里也可以换成 <code>em</code> （一般情况下，<code>1em</code> 等于 <code>16px</code>，具体换算由浏览器决定），两者之中 <code>em</code> 更适合移植。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">column-width</span>: <span class="number">12.5em</span>; <span class="comment">/*相当于 200px*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="3_multi200px.png"></p>
+<p>浏览器将按照你指定的宽度尽可能多的创建列；任何剩余的空间之后会被现有的列平分。 这意味着你可能无法期望得到你指定宽度，除非容器的宽度刚好可以被你指定的宽度除尽。</p>
+<h2 id="给多列增加样式"><a href="#给多列增加样式" class="headerlink" title="给多列增加样式"></a>给多列增加样式</h2><p>Multicol 创建的列无法单独的设定样式。 不存在让单独某一列比其他列更大的方法，同样无法为某一特定的列设置独特的背景色、文本颜色。不过你也可以给列之间采用这样的样式：</p>
+<ul>
+<li>使用 <code>column-gap</code> 改变列间间隙。</li>
+<li>用 <code>column-rule</code> 在列间加入一条分割线。</li>
+</ul>
+<p>以上面的代码为例，增加 <code>column-gap</code> 属性可以更改列间间隙：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">column-width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">column-gap</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你可以尝试不同的值 — 该属性接受任何长度单位。现在再加入 column-rule。和你之前遇到的 <code>border</code> 属性类似， <code>column-rule</code> 是 <code>column-rule-color</code> 和 <code>column-rule-style</code> 的缩写，接受同 <code>border</code> 一样的单位。然后就得到了下面的效果</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">column-count</span>: <span class="number">3</span>;</span><br><span class="line">  <span class="attribute">column-gap</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">column-rule</span>: <span class="number">4px</span> dotted <span class="built_in">rgb</span>(<span class="number">79</span>, <span class="number">185</span>, <span class="number">227</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="3_multi-style.png"></p>
+<h2 id="列与内容折断"><a href="#列与内容折断" class="headerlink" title="列与内容折断"></a>列与内容折断</h2><p>多列布局的内容被拆成碎块。 和多页媒体上的内容表现大致一样 — 比如打印网页的时候。 当你把内容放入多列布局容器内，内容被拆成碎块放进列中，内容折断（比如断词断句）使得这一效果可以实现。</p>
+<p>这里因为篇幅原因暂且不讲这么多，只要知道由这样的东西存在，以后设计网站的时候注意就行。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1645,144 +1910,6 @@
 
 <p>最后用table标签包起来就完事了。  </p>
 <p>按照刚刚的方法完成了下面的表格内容，你还有一个标题。还有一个问题：最上面的大标题。如果你按照同样的方法写，那么它会缩到最左边去。如果看看我的代码，就可以发现，在开始标签里面写一个<code>colspan=&quot;3&quot;</code>就可以让这个单元格有三格的宽度。类似的还有<code>rowspan</code>属性，是描述单元格的高度的。<br>还有一个小小的问题：看我的示例代码，用到了<code>&lt;th&gt;</code>。这是什么？和td有什么区别？其实它也是语义化的内容。th代表标题，td代表下面的内容。这不仅有利于看代码的人理解，也对CSS渲染有好处。  </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/1e832a27952b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="怺加冢穴计算机社团">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="怺加冢穴-博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/1e832a27952b/" class="post-title-link" itemprop="url">HTML：5——头部元素</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-08 13:34:52" itemprop="dateCreated datePublished" datetime="2021-09-08T13:34:52+08:00">2021-09-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-26 18:53:38" itemprop="dateModified" datetime="2021-09-26T18:53:38+08:00">2021-09-26</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</a></li>
-</ul>
-<p>之前我们学习的时候，利用VSCode的自动补全弄了一段很长的生成的代码，大部分都是<code>&lt;head&gt;</code>里的内容。现在就让我们详细讲讲这里的内容。<br>虽然这里的东西大部分不会给用户看到，但它们依然是举足轻重的。让我们一行行看下来。  </p>
-<h2 id="lt-DOCTYPE-html-gt-：文档类型"><a href="#lt-DOCTYPE-html-gt-：文档类型" class="headerlink" title="&lt;!DOCTYPE html&gt;：文档类型"></a><code>&lt;!DOCTYPE html&gt;</code>：文档类型</h2><p>（叹气）这玩意吧，其实是历史遗留了，现在反正也没啥用。不过最好加上去就完事了。</p>
-<h2 id="lt-html-lang-quot-en-quot-gt-：主语言"><a href="#lt-html-lang-quot-en-quot-gt-：主语言" class="headerlink" title="&lt;html lang=&quot;en&quot;&gt;：主语言"></a><code>&lt;html lang=&quot;en&quot;&gt;</code>：主语言</h2><p>这句话的意思是设置主语言为英文。你可以把它改成<code>&lt;html lang=&quot;zh-CN&quot;&gt;</code>，这样就是简体中文了。<br>这在很多方面都很有用。如果你的HTML文档的语言设置好了，那么你的HTML文档就会被搜索引擎更有效地索引 (例如，允许它在特定于语言的结果中正确显示)，对于那些使用屏幕阅读器的视障人士也很有用(比如， 法语和英语中都有“six”这个单词，但是发音却完全不同)。浏览器能更好地识别网页的语言，也就能更好地为用户提供机翻。</p>
-<p>你还可以将文档的分段设置为不同的语言，使用的是<code>&lt;span&gt;</code>元素。例如，我们可以把日语部分设置为日语，如下所示：  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>日语实例: <span class="tag">&lt;<span class="name">span</span> <span class="attr">lang</span>=<span class="string">&quot;jp&quot;</span>&gt;</span>ご飯が熱い。<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="lt-meta-gt-：元数据"><a href="#lt-meta-gt-：元数据" class="headerlink" title="&lt;meta&gt;：元数据"></a><code>&lt;meta&gt;</code>：元数据</h2><p>元数据就是描述数据的数据。<code>&lt;meta&gt;</code>就可以用来添加元数据。  </p>
-<h3 id="lt-meta-charset-quot-UTF-8-quot-gt-：指定字符集"><a href="#lt-meta-charset-quot-UTF-8-quot-gt-：指定字符集" class="headerlink" title="&lt;meta charset=&quot;UTF-8&quot;&gt;：指定字符集"></a><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>：指定字符集</h3><p>之前我们的基础教程里讲了编码，也就是现在说的字符集。UTF-8是现在做网页最常用的字符集（最好不要用别的）。这句话的意思就是指定字符集。  </p>
-<h3 id="lt-meta-http-equiv-quot-X-UA-Compatible-quot-content-quot-IE-edge-quot-gt"><a href="#lt-meta-http-equiv-quot-X-UA-Compatible-quot-content-quot-IE-edge-quot-gt" class="headerlink" title="&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;"></a><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code></h3><p>（叹气）众所周知IE是垃圾浏览器，这句话就是为了给IE垃圾浏览器做兼容用的。反正是生成的，别动它，留着就完事了。  </p>
-<h3 id="lt-meta-name-quot-xxx-quot-content-quot-xxx-quot-gt"><a href="#lt-meta-name-quot-xxx-quot-content-quot-xxx-quot-gt" class="headerlink" title="&lt;meta name=&quot;xxx&quot; content=&quot;xxx&quot;&gt;"></a><code>&lt;meta name=&quot;xxx&quot; content=&quot;xxx&quot;&gt;</code></h3><p>许多<code>&lt;meta&gt;</code> 元素包含了name 和 content 特性：<br>name 指定了meta 元素的类型； 说明该元素包含了什么类型的信息。<br>content 指定了实际的元数据内容。<br>比如下面的一个例子指定了作者：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;GCVillager&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>还有一个例子，可以认为是对页面的简要描述：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;The MDN Learning Area aims to provide</span></span></span><br><span class="line"><span class="tag"><span class="string">complete beginners to the Web with all they need to know to get</span></span></span><br><span class="line"><span class="tag"><span class="string">started with developing web sites and applications.&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>你还可以定义各种各样的元数据。<br>如果你学过一门编程语言的话，就会觉得，这有点像是<code>author=&quot;GCVillager&quot;</code>之类的表达式。（这句话看不懂就算了）。<br>指定包含关于页面内容的关键字的页面内容的描述是很有用的，因为它可能或让你的页面在搜索引擎的相关的搜索出现得更多。（内卷！）  </p>
-<h2 id="lt-title-gt-：标题"><a href="#lt-title-gt-：标题" class="headerlink" title="&lt;title&gt;：标题"></a><code>&lt;title&gt;</code>：标题</h2><p>这个标题是浏览器的标签页上的那个标题，不是用<code>&lt;h1&gt;</code>写的标题。如图所示：<br><img src="5_title-and-h1.png" alt="title和h1">  </p>
-<p>它的<code>&lt;head&gt;</code>元素里面，就有这样一句话：<code>&lt;title&gt;入门CSS | 永嘉中学-博客&lt;/title&gt;</code>。收藏页面的时候，默认的标题也是<code>&lt;title&gt;</code>里的内容。  </p>
-<p>然后现在我们看一下，比如说在Google上搜MDN的时候，就会出现<code>&lt;title&gt;</code>里的内容（蓝色方框），还有名称为discrption的元数据的内容（红色方框）。或者你在QQ里分享的时候也会差不多。所以写这些是值得的。  </p>
-<p><img src="5_mdn-search-result.png" alt="搜索引擎显示"></p>
-<p>除了VSCode自动生成的那些东西，还有一些别的。请看——  </p>
-<h2 id="添加自定义图标"><a href="#添加自定义图标" class="headerlink" title="添加自定义图标"></a>添加自定义图标</h2><p>从标签页上面就可以看到，到目前为止，你的网页还没有图标。这未免有些丑。<br>示例如下：  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>rel</code>属性向浏览器说明文件的类型，方便它处理；<code>href</code>属性指向一个链接（和<code>&lt;a&gt;</code>元素很像），这里是你的图标的链接，可以是任意链接（相对或者绝对路径）。<br>至于这个文件格式，ico就是图标用的格式。其实你可以用别的格式，比如最常用的png，但是在某些年代久远的IE浏览器上，png格式的图标不一定能显示。<br>如果要使用png格式的图标，就可以像这样做：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://developer.mozilla.org/static/img/favicon32.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>另外，收藏夹里看到的图标也是这里指定的图标。  </p>
-<h2 id="应用CSS"><a href="#应用CSS" class="headerlink" title="应用CSS"></a>应用CSS</h2><p>虽然我觉得GXH的教程里大概会讲，但是为了避免他说我没讲，要骂我，再加上后面要用到，还是要讲一下。  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;my-css-file.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：这一句依然要写在head里。</strong> 同理，<code>rel=&quot;stylesheet</code>就是说文件类型，<code>href</code>写的还是文件链接。用它引入CSS之后，页面就能根据CSS的要求渲染了。比如说我们上次写的那句：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一段<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;red&quot;</span>&gt;</span>奇怪<span class="tag">&lt;/<span class="name">span</span>&gt;</span>的文字，<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;hide&quot;</span>&gt;</span>这里你是看不见的<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>加上了对应的CSS之后，就能正确显示了。<br>点击<a href="5-test.css">这个链接</a>下载CSS文件，将它与你要写的HTML放在同一个文件夹里。然后用link语句链接进来。至于应该怎么写，你自己想想——其实模仿着写就对了。<br>然后再把那段HTML代码复制进去，就可以看到上次那张图片里的样子了。  </p>
-<h2 id="应用Javascript"><a href="#应用Javascript" class="headerlink" title="应用Javascript"></a>应用Javascript</h2><p>也是写在head里。这样引入一段写在外部文件里的脚本：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;my-js-file.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这里的src是source的缩写，和href其实有点像。注意，<code>&lt;script&gt;</code>并不是空元素，所以要有闭合标签。<br>还有一种方式引入Javascript，就是直接写在里面：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">boring</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> i=<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> i+<span class="number">1</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>刚刚写在里面的就是一段Javascript代码。（至于JS代码怎么写，就是以后的事情了）  </p>
-<p>GCV写累了，表格我们下次再说。</p>
 
       
     </div>

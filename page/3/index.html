@@ -129,20 +129,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -174,6 +174,144 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/1e832a27952b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/1e832a27952b/" class="post-title-link" itemprop="url">HTML：5——头部元素</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-08 13:34:52" itemprop="dateCreated datePublished" datetime="2021-09-08T13:34:52+08:00">2021-09-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-26 18:53:38" itemprop="dateModified" datetime="2021-09-26T18:53:38+08:00">2021-09-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML</a></li>
+</ul>
+<p>之前我们学习的时候，利用VSCode的自动补全弄了一段很长的生成的代码，大部分都是<code>&lt;head&gt;</code>里的内容。现在就让我们详细讲讲这里的内容。<br>虽然这里的东西大部分不会给用户看到，但它们依然是举足轻重的。让我们一行行看下来。  </p>
+<h2 id="lt-DOCTYPE-html-gt-：文档类型"><a href="#lt-DOCTYPE-html-gt-：文档类型" class="headerlink" title="&lt;!DOCTYPE html&gt;：文档类型"></a><code>&lt;!DOCTYPE html&gt;</code>：文档类型</h2><p>（叹气）这玩意吧，其实是历史遗留了，现在反正也没啥用。不过最好加上去就完事了。</p>
+<h2 id="lt-html-lang-quot-en-quot-gt-：主语言"><a href="#lt-html-lang-quot-en-quot-gt-：主语言" class="headerlink" title="&lt;html lang=&quot;en&quot;&gt;：主语言"></a><code>&lt;html lang=&quot;en&quot;&gt;</code>：主语言</h2><p>这句话的意思是设置主语言为英文。你可以把它改成<code>&lt;html lang=&quot;zh-CN&quot;&gt;</code>，这样就是简体中文了。<br>这在很多方面都很有用。如果你的HTML文档的语言设置好了，那么你的HTML文档就会被搜索引擎更有效地索引 (例如，允许它在特定于语言的结果中正确显示)，对于那些使用屏幕阅读器的视障人士也很有用(比如， 法语和英语中都有“six”这个单词，但是发音却完全不同)。浏览器能更好地识别网页的语言，也就能更好地为用户提供机翻。</p>
+<p>你还可以将文档的分段设置为不同的语言，使用的是<code>&lt;span&gt;</code>元素。例如，我们可以把日语部分设置为日语，如下所示：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>日语实例: <span class="tag">&lt;<span class="name">span</span> <span class="attr">lang</span>=<span class="string">&quot;jp&quot;</span>&gt;</span>ご飯が熱い。<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="lt-meta-gt-：元数据"><a href="#lt-meta-gt-：元数据" class="headerlink" title="&lt;meta&gt;：元数据"></a><code>&lt;meta&gt;</code>：元数据</h2><p>元数据就是描述数据的数据。<code>&lt;meta&gt;</code>就可以用来添加元数据。  </p>
+<h3 id="lt-meta-charset-quot-UTF-8-quot-gt-：指定字符集"><a href="#lt-meta-charset-quot-UTF-8-quot-gt-：指定字符集" class="headerlink" title="&lt;meta charset=&quot;UTF-8&quot;&gt;：指定字符集"></a><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>：指定字符集</h3><p>之前我们的基础教程里讲了编码，也就是现在说的字符集。UTF-8是现在做网页最常用的字符集（最好不要用别的）。这句话的意思就是指定字符集。  </p>
+<h3 id="lt-meta-http-equiv-quot-X-UA-Compatible-quot-content-quot-IE-edge-quot-gt"><a href="#lt-meta-http-equiv-quot-X-UA-Compatible-quot-content-quot-IE-edge-quot-gt" class="headerlink" title="&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;"></a><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code></h3><p>（叹气）众所周知IE是垃圾浏览器，这句话就是为了给IE垃圾浏览器做兼容用的。反正是生成的，别动它，留着就完事了。  </p>
+<h3 id="lt-meta-name-quot-xxx-quot-content-quot-xxx-quot-gt"><a href="#lt-meta-name-quot-xxx-quot-content-quot-xxx-quot-gt" class="headerlink" title="&lt;meta name=&quot;xxx&quot; content=&quot;xxx&quot;&gt;"></a><code>&lt;meta name=&quot;xxx&quot; content=&quot;xxx&quot;&gt;</code></h3><p>许多<code>&lt;meta&gt;</code> 元素包含了name 和 content 特性：<br>name 指定了meta 元素的类型； 说明该元素包含了什么类型的信息。<br>content 指定了实际的元数据内容。<br>比如下面的一个例子指定了作者：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;GCVillager&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>还有一个例子，可以认为是对页面的简要描述：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;The MDN Learning Area aims to provide</span></span></span><br><span class="line"><span class="tag"><span class="string">complete beginners to the Web with all they need to know to get</span></span></span><br><span class="line"><span class="tag"><span class="string">started with developing web sites and applications.&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>你还可以定义各种各样的元数据。<br>如果你学过一门编程语言的话，就会觉得，这有点像是<code>author=&quot;GCVillager&quot;</code>之类的表达式。（这句话看不懂就算了）。<br>指定包含关于页面内容的关键字的页面内容的描述是很有用的，因为它可能或让你的页面在搜索引擎的相关的搜索出现得更多。（内卷！）  </p>
+<h2 id="lt-title-gt-：标题"><a href="#lt-title-gt-：标题" class="headerlink" title="&lt;title&gt;：标题"></a><code>&lt;title&gt;</code>：标题</h2><p>这个标题是浏览器的标签页上的那个标题，不是用<code>&lt;h1&gt;</code>写的标题。如图所示：<br><img src="5_title-and-h1.png" alt="title和h1">  </p>
+<p>它的<code>&lt;head&gt;</code>元素里面，就有这样一句话：<code>&lt;title&gt;入门CSS | 永嘉中学-博客&lt;/title&gt;</code>。收藏页面的时候，默认的标题也是<code>&lt;title&gt;</code>里的内容。  </p>
+<p>然后现在我们看一下，比如说在Google上搜MDN的时候，就会出现<code>&lt;title&gt;</code>里的内容（蓝色方框），还有名称为discrption的元数据的内容（红色方框）。或者你在QQ里分享的时候也会差不多。所以写这些是值得的。  </p>
+<p><img src="5_mdn-search-result.png" alt="搜索引擎显示"></p>
+<p>除了VSCode自动生成的那些东西，还有一些别的。请看——  </p>
+<h2 id="添加自定义图标"><a href="#添加自定义图标" class="headerlink" title="添加自定义图标"></a>添加自定义图标</h2><p>从标签页上面就可以看到，到目前为止，你的网页还没有图标。这未免有些丑。<br>示例如下：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>rel</code>属性向浏览器说明文件的类型，方便它处理；<code>href</code>属性指向一个链接（和<code>&lt;a&gt;</code>元素很像），这里是你的图标的链接，可以是任意链接（相对或者绝对路径）。<br>至于这个文件格式，ico就是图标用的格式。其实你可以用别的格式，比如最常用的png，但是在某些年代久远的IE浏览器上，png格式的图标不一定能显示。<br>如果要使用png格式的图标，就可以像这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://developer.mozilla.org/static/img/favicon32.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>另外，收藏夹里看到的图标也是这里指定的图标。  </p>
+<h2 id="应用CSS"><a href="#应用CSS" class="headerlink" title="应用CSS"></a>应用CSS</h2><p>虽然我觉得GXH的教程里大概会讲，但是为了避免他说我没讲，要骂我，再加上后面要用到，还是要讲一下。  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;my-css-file.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：这一句依然要写在head里。</strong> 同理，<code>rel=&quot;stylesheet</code>就是说文件类型，<code>href</code>写的还是文件链接。用它引入CSS之后，页面就能根据CSS的要求渲染了。比如说我们上次写的那句：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一段<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;red&quot;</span>&gt;</span>奇怪<span class="tag">&lt;/<span class="name">span</span>&gt;</span>的文字，<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;hide&quot;</span>&gt;</span>这里你是看不见的<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>加上了对应的CSS之后，就能正确显示了。<br>点击<a href="5-test.css">这个链接</a>下载CSS文件，将它与你要写的HTML放在同一个文件夹里。然后用link语句链接进来。至于应该怎么写，你自己想想——其实模仿着写就对了。<br>然后再把那段HTML代码复制进去，就可以看到上次那张图片里的样子了。  </p>
+<h2 id="应用Javascript"><a href="#应用Javascript" class="headerlink" title="应用Javascript"></a>应用Javascript</h2><p>也是写在head里。这样引入一段写在外部文件里的脚本：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;my-js-file.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里的src是source的缩写，和href其实有点像。注意，<code>&lt;script&gt;</code>并不是空元素，所以要有闭合标签。<br>还有一种方式引入Javascript，就是直接写在里面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">boring</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> i=<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> i+<span class="number">1</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>刚刚写在里面的就是一段Javascript代码。（至于JS代码怎么写，就是以后的事情了）  </p>
+<p>GCV写累了，表格我们下次再说。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
