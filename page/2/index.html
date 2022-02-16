@@ -129,7 +129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,6 +174,173 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/aa5fc1a94f72/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/aa5fc1a94f72/" class="post-title-link" itemprop="url">JS —— 语句，值，变量</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-26 16:15:56" itemprop="dateCreated datePublished" datetime="2021-09-26T16:15:56+08:00">2021-09-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-29 12:43:14" itemprop="dateModified" datetime="2021-09-29T12:43:14+08:00">2021-09-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JS/Guide/Grammar_and_types">https://developer.mozilla.org/zh-CN/docs/Web/JS/Guide/Grammar_and_types</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JS/Reference/Global_Objects/Number">https://developer.mozilla.org/zh-CN/docs/Web/JS/Reference/Global_Objects/Number</a></li>
+</ul>
+<p>本文基于 CC-BY-SA 4.0 协议发布。</p>
+<h2 id="语句和注释"><a href="#语句和注释" class="headerlink" title="语句和注释"></a>语句和注释</h2><p>在开始变量之前我们讲一下语句。JS 的语句是以英文分号 <code>;</code> 结尾的，而<strong>不是换行</strong>，因为同一行内可以用分号隔开多条语句。虽然 JS 对于一个没有分号直接换行的语句会自动补上分号，但是最好不要这么做。为了防止自己出现这些问题，你可以给自己的 VSCode 装上相关的 Lint 插件。</p>
+<p>注释可以写在代码里面，解释器会自动忽略它们。你可以用这些说明你的程序干了什么。JS 里面有着两种注释，一种是用 <code>/* */</code> 包裹的注释，一种是用 <code>//</code> 开头到一行结尾的注释。下面是两种注释的使用。后面我们会用到的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 我是一行注释 */</span></span><br><span class="line"><span class="comment">// 我也是一行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">我可以跨行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 我只能</span></span><br><span class="line"><span class="comment">// 这么跨行</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型与基本运算"><a href="#数据类型与基本运算" class="headerlink" title="数据类型与基本运算"></a>数据类型与基本运算</h2><p>JS 里有七种基本数据类型，但是很多类型现在都用不到。所以我们就先讲下最常用的数字和字符串，以及一些基础的运算。</p>
+<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>在 JS 里面只有一个数字类型。不论这些数字是像30（也叫整数）这样，或者像2.456这样的小数（也叫做浮点数），在内部都是用浮点数来表示的。这个和别的编程语言（比如 python）不同。这意味着 <code>1</code> 和 <code>1.0</code> 是同一个数字（而其他语言就是两个类型的数字）。</p>
+<p>数字可以进行四则运算，优先级和数学里一样，你也可以加上括号改变优先级，就像在用计算器。乘号使用星号(<code>*</code>)代替，除号使用斜杠(<code>/</code>)代替。运算符两边可以加上空格，这样排版会更美观一点(也许是)。</p>
+<p>你可以打开浏览器的控制台运行你的 JS，也可以在本地安装 Nodejs ，使用 Node 来运行。我演示的时候使用的是 Node，因为可以直接在 VSCode 的控制台内输入 <code>node</code> 指令来打开。</p>
+<p>下面是在 Node 中运行的结果，其中 <code>&gt;</code> 表示这行是输入，输入紧跟着的下一行就是控制台的提示输出。注意实际的 JS 脚本在浏览器运行的时候是没有给每行加上一个输出的，你要用 <code>console.log()</code> 来进行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">1</span>; <span class="comment">// 1 就是 1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt; -<span class="number">1</span>; <span class="comment">// -1 就是 -1</span></span><br><span class="line">-<span class="number">1</span></span><br><span class="line">&gt; <span class="number">1</span>+<span class="number">1</span>;  <span class="comment">// 就是一加一</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; <span class="number">1</span> + <span class="number">1</span>; <span class="comment">// 加上空格之后运行结果也一样</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; <span class="number">1</span>*<span class="number">2</span> + <span class="number">2</span>*<span class="number">3</span>; <span class="comment">// 运算符优先级和数学一样</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line">&gt; (<span class="number">1</span>+<span class="number">2</span>)*<span class="number">3</span>; <span class="comment">// 使用了括号</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line">&gt; <span class="number">6</span> / <span class="number">3</span>; <span class="comment">// 除法</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; <span class="number">1.1</span> + <span class="number">1.5</span>; <span class="comment">// 小数加法</span></span><br><span class="line"><span class="number">2.6</span></span><br><span class="line">&gt; <span class="number">0.1</span> + <span class="number">0.2</span>; <span class="comment">// 这是浮点数误差导致的</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<p>最后一个 <code>0.1 + 0.2</code> 算出来结果是 <code>0.30000000000000004</code> （15 个 0 ，不用数了），这是怎么回事？这不是 bug，是语言的特性，叫做<strong>浮点数误差</strong>，是因为计算机在转换小数到二进制的时候丢失精度导致的(可以看 <a target="_blank" rel="noopener" href="https://0.30000000000000004.com/">https://0.30000000000000004.com/</a> 了解)。所以以后判断小数相等的时候可能不能直接用等号来进行。</p>
+<p>除了四则运算之外，还有一种取余运算，使用百分号(<code>%</code>)。在两者都是正数的时候，可以取得前一个数字除以后一个数字的余数。如果出现负数可能就不太一样，不过一般不会遇到，所以就先略过。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">5</span> % <span class="number">2</span>;</span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt; <span class="number">5</span> % <span class="number">3</span>;</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; <span class="number">25</span> % <span class="number">5</span>;</span><br><span class="line"><span class="number">0</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<p>有时候我们需要舍弃小数部分，这可以用 <code>Math</code> 的一些方法来进行。其中 <code>Math.round()</code> 四舍五入，<code>Math.floor()</code> 向下取整， <code>Math.ceil()</code> 向上取整。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Math</span>.round(<span class="string">&quot;3.1415926&quot;</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line">&gt; <span class="built_in">Math</span>.round(<span class="string">&quot;3.999&quot;</span>)</span><br><span class="line"><span class="number">4</span></span><br><span class="line">&gt; <span class="built_in">Math</span>.ceil(<span class="string">&quot;3.1415926&quot;</span>)</span><br><span class="line"><span class="number">4</span></span><br><span class="line">&gt; <span class="built_in">Math</span>.floor(<span class="string">&quot;3.999&quot;</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<p>数字的范围是有限制的，超出限制的就无法精确表示。JS 能够准确表示的整数范围在 <code>-2^53</code> 到 <code>2^53</code> 之间（不含两个端点），超过这个范围，就无法精确表示这个整数。</p>
+<p>如果一个式子不能被计算，那么它的值就会变成 <code>NaN</code> ( Not a Number，不是一个数字，最典型的就是给 -1 开平方，或者尝试给一个不全是数字的字符串转成数字。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Math</span>.sqrt(-<span class="number">1</span>); <span class="comment">// 给 -1 开平方 </span></span><br><span class="line"><span class="literal">NaN</span></span><br><span class="line">&gt; <span class="built_in">parseInt</span>(<span class="string">&quot;123&quot;</span>); <span class="comment">// 正常的转换</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line">&gt; <span class="built_in">parseInt</span>(<span class="string">&quot;Your life is which you loved&quot;</span>); <span class="comment">//给字符转数字</span></span><br><span class="line"><span class="literal">NaN</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>另一个非常常用的就是字符串。顾名思义，这就是一串的字符。它可以用一对英文单引号（<code>&#39;&#39;</code>）或者一对英文双引号(<code>&quot;&quot;</code>)包裹一串字符来表示，比如 <code>&#39;我是一个字符串&#39;</code> <code>&quot;我是另一个字符串&quot;</code>。</p>
+<p>同样和别的语言不一样的是，JS 只有字符串类型，而没有单个字符类型。你可以用只有一个字符的字符串代替。</p>
+<p>如果要在字符串里面包含特殊字符可以在字符前加上反斜杠( <code>\</code> )进行转义。比方说要包含引号的时候，就可以用 <code>\&quot;</code> 或者 <code>\&#39;</code> 来表示引号本身而不是字符串结尾。</p>
+<p>你可以使用加号 <code>+</code> 来对字符串进行拼接操作，这可以得到这些字符串首尾相连的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">&quot;I am a str&quot;</span>; <span class="comment">// 使用一对双引号</span></span><br><span class="line"><span class="string">&#x27;I am a str&#x27;</span></span><br><span class="line">&gt; <span class="string">&#x27;Another str&#x27;</span>; <span class="comment">// 一对单引号</span></span><br><span class="line"><span class="string">&#x27;Another str&#x27;</span></span><br><span class="line">&gt; <span class="string">&#x27;a&#x27;</span>; <span class="comment">// 单个字符的字符串</span></span><br><span class="line"><span class="string">&#x27;a&#x27;</span></span><br><span class="line">&gt; <span class="string">&#x27;一个有引号\&quot;的字符串&#x27;</span>; <span class="comment">// 转义</span></span><br><span class="line"><span class="string">&#x27;一个有引号&quot;的字符串&#x27;</span></span><br><span class="line">&gt; <span class="string">&#x27;也可以这样带上单引号:\&#x27;. &#x27;</span>; <span class="comment">// 也是转义</span></span><br><span class="line"><span class="string">&quot;也可以这样带上单引号:&#x27;. &quot;</span></span><br><span class="line">&gt; <span class="string">&quot;aa&quot;</span> + <span class="string">&quot;bb&quot;</span>; <span class="comment">// 拼接</span></span><br><span class="line"><span class="string">&#x27;aabb&#x27;</span></span><br><span class="line">&gt; <span class="string">&#x27;abc&#x27;</span> + <span class="string">&#x27; &#x27;</span> + <span class="string">&#x27;def&#x27;</span>; <span class="comment">// 多个一起拼接</span></span><br><span class="line"><span class="string">&#x27;abc def&#x27;</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><p>字符串和数字之间可以相互转换。这些转换通过一些 JS 内置的函数进行。有些是显式进行的（比如调用一个函数），有些是隐式进行的（比如让字符串和数字相加）。</p>
+<p>一般情况下，涉及数字转字符串的我们采取隐式的方式。字符串转数字的时候我们使用 <code>parseFloat()</code> 和 <code>parseInt()</code> 函数来显式转换，用法是在括号内放一个字符串。<code>parseFloat()</code> 的结果如果有小数会带上小数部分， <code>parseInt()</code> 的结果会直接去掉小数部分（而不是四舍五入）有关函数更为具体的内容我们以后会探讨，这里可以简单看作是一些封装起来的代码，执行之后返回一个结果。</p>
+<p>下面我们来演示这些。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">&quot;The answer is &quot;</span> + <span class="number">42</span>; <span class="comment">// 一个拼接</span></span><br><span class="line"><span class="string">&#x27;The answer is 42&#x27;</span></span><br><span class="line">&gt; <span class="number">42</span> + <span class="string">&quot; is the answer&quot;</span>; <span class="comment">// 另一个拼接</span></span><br><span class="line"><span class="string">&#x27;42 is the answer&#x27;</span></span><br><span class="line">&gt; <span class="string">&quot;37&quot;</span> + <span class="number">7</span>; <span class="comment">// 加法会把数字转成字符串</span></span><br><span class="line"><span class="string">&#x27;377&#x27;</span></span><br><span class="line">&gt; <span class="string">&quot;37&quot;</span> - <span class="number">7</span>; <span class="comment">// 除了加法都会将字符串转成数字</span></span><br><span class="line"><span class="number">30</span></span><br><span class="line">&gt; <span class="built_in">parseFloat</span>(<span class="string">&quot;37&quot;</span>) - <span class="number">7</span>; <span class="comment">// parseFloat 的结果也一样</span></span><br><span class="line"><span class="number">30</span></span><br><span class="line">&gt; <span class="built_in">parseFloat</span>(<span class="string">&quot;123&quot;</span>); <span class="comment">// 这里也是整数</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line">&gt; <span class="built_in">parseFloat</span>(<span class="string">&quot;123.45&quot;</span>); <span class="comment">// 小数部分也正常</span></span><br><span class="line"><span class="number">123.45</span></span><br><span class="line">&gt; <span class="built_in">parseFloat</span>(<span class="string">&quot;10e5&quot;</span>); <span class="comment">// 还可以用科学计数法</span></span><br><span class="line"><span class="number">1000000</span></span><br><span class="line">&gt; <span class="built_in">parseInt</span>(<span class="string">&quot;123&quot;</span>); <span class="comment">// parseInt 的整数转换</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line">&gt; <span class="built_in">parseInt</span>(<span class="string">&quot;123.45&quot;</span>); <span class="comment">// 现在去掉小数了</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p><strong>变量</strong>本质上是值（例如数字或字符串）的容器，比如你可以用它去存一个数字 <code>123</code>，也可以存一个 <code>Hello world!</code> 字符串。</p>
+<p>变量可以通过这三个关键字声明：</p>
+<ul>
+<li><code>let</code>: 这是在 ECMAScript 2015 里面添加的。我们建议如果没有支持旧浏览器的需求就使用它。</li>
+<li><code>var</code>: 这是旧的声明变量方式，现在也可以用，但是不推荐，因为 <code>var</code> 可以被重复声明，这会导致很多问题。</li>
+<li><code>const</code>: 这是常量，声明之后不能修改。</li>
+</ul>
+<blockquote>
+<p>最好不要使用 var，因为它可以被重复声明，如果不小心重复声明了一个变量，会导致问题问题。同时用 var 声明的变量会发生变量提升，产生更多难以预料的问题。</p>
+</blockquote>
+<p>变量名在 JS 里面又叫做<strong>标识符</strong>。标识符是有规则的，必须以字母、下划线（_）或者美元符号（$）开头，而不能是数字开头；但是后续的字符也可以是数字（0-9）。同时 JS 支持 Unicode 字符集（也就是你可以声明一个中文变量，虽然没啥用）。JS 是大小写敏感的，比如 <code>aA</code> 和 <code>aa</code> 就是两个变量。</p>
+<p>除了上面的规则之外，你也不能使用 JS 的保留字给变量命名。保留字，即是组成JavaScript 的实际语法的单词。比方说什么 <code>if</code>, <code>while</code>, <code>for</code> 这些。一般变量命名是不会和保留字重复的。</p>
+<p>我们建议使用大小写驼峰命名法，也就是包含多个单词的变量名称的第一个单词开头小写，其余单词开头大写。比如我要命名一个 “My first name” 来存名字，变量名就可以写成 <code>myFirstName</code> 。</p>
+<p>变量声明之后，默认的值是 <code>undefined</code> 。你可以通过比较一个变量是否等于 <code>undefined</code> 来判断变量是否初始化(使用双等号 <code>==</code> 或三等号 <code>===</code> 来比较，例如 <code>x === undefined;</code> )。直接在控制台里面打一个变量名可以输出变量的值，如果调用没有声明的变量会弹出一个错误。</p>
+<p>非 <code>const</code> 变量在声明之后可以重新赋值。赋值使用单个等号，格式为 <code>变量名 = 新的值;</code> 。新的值可以是单个值，比如 <code>x = 1;</code> 也可以是一个表达式 <code>x = 1 + 2;</code>, 或者 <code>x = x + 1;</code> （给 x 加上 1）。</p>
+<p>声明和赋值可以写在一起，比如 <code>let x = 1;</code> 就可以声明一个变量，值为 <code>1</code>。</p>
+<p>我们现在可以这样试着声明变量，下面是在 Nodejs 上运行的结果，当然浏览器也一样。(语句<strong>一定</strong>要加上分号，虽然没有分号也能运行，但是最好不要养成坏习惯):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">let</span> myFirstName; <span class="comment">/*声明了一个 myFirstName*/</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; myFirstName; <span class="comment">// 显示 myFirstName 的值</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; <span class="keyword">var</span> myValue; <span class="comment">// 声明了一个 myValue</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; myFirstName = <span class="string">&quot;Steve&quot;</span>; <span class="comment">/*给 myFirstName 赋值了 &quot;Steve&quot; */</span></span><br><span class="line"><span class="string">&#x27;Steve&#x27;</span></span><br><span class="line">&gt; myFirstName;</span><br><span class="line"><span class="string">&#x27;Steve&#x27;</span></span><br><span class="line">&gt; myValue = <span class="number">1</span> + <span class="number">1</span>; <span class="comment">/*给 myValue 赋值了 1 + 1，值是 2 */</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; myValue;</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; myValue = <span class="string">&quot;aaa&quot;</span>; <span class="comment">/*重新给 myValue 赋值了一个字符串 */</span></span><br><span class="line"><span class="string">&#x27;aaa&#x27;</span></span><br><span class="line">&gt; myValue; <span class="comment">/*现在 myValue 是一个字符串*/</span></span><br><span class="line"><span class="string">&#x27;aaa&#x27;</span></span><br><span class="line">&gt; <span class="keyword">let</span> myFirstName;<span class="comment">// 这里重复声明没有通过，而是报错了</span></span><br><span class="line">Uncaught <span class="built_in">SyntaxError</span>: Identifier <span class="string">&#x27;myFirstName&#x27;</span> has already been declared</span><br><span class="line">&gt; <span class="keyword">var</span> myValue; <span class="comment">/*这里重复声明，而且通过了*/</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; myFirstName;</span><br><span class="line"><span class="string">&#x27;Steve&#x27;</span></span><br><span class="line">&gt; myValue; <span class="comment">/*还保留原来的值*/</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt; <span class="keyword">const</span> myConst; <span class="comment">/*声明 const 一定要先初始化！*/</span></span><br><span class="line"><span class="keyword">const</span> myConst;</span><br><span class="line">      ^^^^^^^</span><br><span class="line"></span><br><span class="line">Uncaught <span class="built_in">SyntaxError</span>: Missing initializer <span class="keyword">in</span> <span class="keyword">const</span> declaration</span><br><span class="line">&gt; <span class="keyword">const</span> myConst = <span class="number">2</span>; <span class="comment">/*声明了一个 const 变量*/</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; myConst; <span class="comment">/*打印 myConst 的值*/</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt; myConst = <span class="number">3</span>; <span class="comment">/*尝试给 myConst 重新赋值，不被允许*/</span></span><br><span class="line">Uncaught <span class="built_in">TypeError</span>: Assignment to constant variable.</span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<p>你也可以现在就打开浏览器的控制台输入这些，来进行尝试。上机实践对学习编程非常重要，不上机很多问题在纸上看看是没有结果的。</p>
+<p>由于 JS 的一些奇怪问题，我们建议不能使用下面的方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; bad1 = <span class="string">&quot;This is bad&quot;</span>; <span class="comment">/*没有加上关键字，自动变成全局变量 */</span></span><br><span class="line"><span class="string">&#x27;This is bad&#x27;</span></span><br><span class="line">&gt; bad1;</span><br><span class="line"><span class="string">&#x27;This is bad&#x27;</span></span><br><span class="line">&gt; bad2 === <span class="literal">undefined</span>; <span class="comment">/*这是一个没有声明的变量的正常行为*/</span></span><br><span class="line">Uncaught <span class="built_in">ReferenceError</span>: bad2 is not defined</span><br><span class="line">&gt; bad2 === <span class="literal">undefined</span>; <span class="keyword">var</span> bad2 = <span class="number">0</span>; <span class="comment">/* 先使用后声明，发生变量提升*/</span></span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; bad2;</span><br><span class="line"><span class="number">0</span></span><br><span class="line">&gt; bad3 = <span class="number">0</span>; <span class="keyword">let</span> bad3; <span class="comment">/*所以要用 let*/</span></span><br><span class="line">Uncaught <span class="built_in">ReferenceError</span>: Cannot access <span class="string">&#x27;bad3&#x27;</span> before initialization</span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<p>用 <code>var</code> 声明的变量会发生变量提升，相当于把声明语句往上挪到作用域的开头了。这没什么用，反而会造成一些问题，所以你应该尽量只用 <code>let</code> 来声明。</p>
+<p>变量赋值之后就可以用来进行一系列运算，就和普通的值一样。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">let</span> x = <span class="number">2</span>; <span class="comment">// 声明+初始化</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; <span class="keyword">let</span> y = <span class="number">3</span>;</span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; x + y; <span class="comment">// 进行四则运算</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">&gt; x - y;</span><br><span class="line">-<span class="number">1</span></span><br><span class="line">&gt; x + <span class="number">10</span>;</span><br><span class="line"><span class="number">12</span></span><br><span class="line">&gt; <span class="keyword">let</span> str1 = <span class="string">&#x27;AAA&#x27;</span>; <span class="comment">// 声明了两个字符串</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; <span class="keyword">let</span> str2 = <span class="string">&#x27;BBB&#x27;</span>;</span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">&gt; str1 + str2; <span class="comment">// 尝试一些拼接操作</span></span><br><span class="line"><span class="string">&#x27;AAABBB&#x27;</span></span><br><span class="line">&gt; x + <span class="string">&#x27; &#x27;</span> + str1;</span><br><span class="line"><span class="string">&#x27;2 AAA&#x27;</span></span><br><span class="line">&gt; str1 + <span class="string">&quot; is Str1&quot;</span>;</span><br><span class="line"><span class="string">&#x27;AAA is Str1&#x27;</span></span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
+
+<h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><p>不像其他语言，JS 最初是给浏览器设计的，直到现在这也是它的最主要用途，所以它和 DOM 深度绑定，信息几乎都是从 HTML 页面读取，输出也基本都是写在HTML 当中，甚至没有标准化的输入和输出。由于我们现在还没学过对象(Object)，所以我们采用一些其他方式进行输入输出。</p>
+<p>我们使用 <code>console.log()</code> 函数进行输出，这个函数会在控制台上留下一条信息。不仅可以给它一个字符串，也可以给它一个语句，比如 <code>console.log(1 + 1);</code> 输出 2。</p>
+<p>对于输入，我们选择手动更改代码中的相关变量赋值来进行替代。这可能有点麻烦，不过在学了 DOM 之后就可以用更标准的方法进行。</p>
+<h2 id="最后——顺序结构"><a href="#最后——顺序结构" class="headerlink" title="最后——顺序结构"></a>最后——顺序结构</h2><p>我们了解了 JS 里面的数字和字符串类型，以及它们的基本运算和转换关系。</p>
+<p>我们还了解了变量，它是一种容器，可以用来存放变量。变量在赋值之后可以进行一系列的操作，就像普通的值一样。</p>
+<p>现在，你可以写一些小程序来进行一些简单的运算了。比如一个最简单的 A+B Problem，输出 a+b 的结果:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> c = a + b;</span><br><span class="line"><span class="built_in">console</span>.log(c);</span><br></pre></td></tr></table></figure>
+
+<p>试试写出类似的 A-B，A*B，然后按照我们之前 Hello world 的方式加到浏览器里面运行。</p>
+<p>这里的程序就是一个典型的<strong>顺序结构</strong>，代码从上到下一步步运行，最后得出结果。这是程序的三大基本结构之一，另外两个分别是<strong>分支</strong>和<strong>循环</strong>，我们会在不久之后提到。了解三大基本结构之后，理论上你就可以写出一些真正能用的程序了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -230,11 +397,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
         </span>
     </span>
 
@@ -366,11 +533,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
         </span>
     </span>
 
@@ -490,11 +657,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
         </span>
     </span>
 
@@ -755,11 +922,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
         </span>
     </span>
 
@@ -938,11 +1105,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">CSS进阶</span></a>
         </span>
     </span>
 
@@ -1092,11 +1259,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -1234,11 +1401,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -1469,11 +1636,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -1639,11 +1806,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -1689,238 +1856,6 @@
 <p><code>font-style</code> 用来设置斜体。例如 <code>font-style: italic</code> 设置字体为斜体。</p>
 <p><code>font-weight</code> 设置粗体。<code>font-weight: bold</code> 将字体设置成粗体。</p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我们会在下一章开始正式运用 CSS 到我们的网页上面。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/47168df2e64b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="怺加冢穴计算机社团">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="怺加冢穴-博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/47168df2e64b/" class="post-title-link" itemprop="url">什么是开源</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-13 20:58:34" itemprop="dateCreated datePublished" datetime="2021-09-13T20:58:34+08:00">2021-09-13</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-22 11:29:52" itemprop="dateModified" datetime="2021-09-22T11:29:52+08:00">2021-09-22</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AC%E8%BD%BD/" itemprop="url" rel="index"><span itemprop="name">转载</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AC%E8%BD%BD/Acfboy/" itemprop="url" rel="index"><span itemprop="name">Acfboy</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>以下是我们转载的文章。</p>
-<hr>
-
-<p>引用的一些内容来源链接在文末给出</p>
-
-<p>大家好，我是Acfboy,算法竞赛，<strong>开源软件</strong>和航空业的爱好者.</p>
-<p>今天，开源软件在生活中的地位与日俱增，但在很多人的概念中，只有闭源软件，没有开源，所以，想通过这篇文章简单介绍介绍开源软件。</p>
-<h2>开源是什么</h2>
-<h3>开源软件的定义</h3>
-<blockquote>
-<p>开放源代码（Open source code）也称为源代码公开，指的是一种软件发布模式。一般的软件仅可取得已经过编译的二进制可执行档，通常只有软件的作者或著作权所有者等拥有程序的原始码。有些软件的作者会将原始码公开，此称之为“源代码公开”，但这并不一定符合“开放源代码”的定义及条件，因为作者可能会设定公开原始码的条件限制，例如限制可阅读原始码的对象、限制衍生品等。</p>
-<p>——百度百科</p>
-</blockquote>
-<p>简单的来说，开源软件就是通过一定的许可协议开放源代码的软件。</p>
-<p>最早源自开源运动之父RMS的<code>Copyleft</code>思想，这里的<code>left</code>不是“左”或“留下”，而与“著作权”中的<code>Copyright</code>相对应。</p>
-<p>RMS：<img src="http://static.oschina.net/uploads/space/2015/0325/070300_M7m1_2306979.jpg" alt=""></p>
-<p>从1989年第一个开源许可协议<code>GPL</code>被提出后，开源软件逐步发展，如今已经渗透到各行各业，你的手机，路由器，你谷的评测机，等等，都使用了按照<code>GPL</code>开源的<code>Linux</code>，其它的一些开源组件也广泛使用，如你谷显然用了<a target="_blank" rel="noopener" href="https://www.mdui.org/">MDUI</a>,一个开源的前端框架。</p>
-<p>程序猿们总是希望自己的软件能够安全使用，遇到问题能自己改或让人改，好奇时能看一看源代码。从这个角度来说，开源软件就像是送给程序员的礼物。</p>
-<p>开源软件同样可以带来商业利益，如<a target="_blank" rel="noopener" href="https://ubuntu.com/pricing">围绕Ubuntu展开的商业服务</a></p>
-<h3>为什么要支持开源</h3>
-<p>首先，开源软件有长期可依赖性，不大可能对你停止授权；对于一些源代码被阅读多的项目，安全性和稳定性是可以保证的；由于源代码开放，可定制程度高，易于学习（只要你足够厉害），也是其一大亮点。</p>
-<p>前一段时间，美国搞了一个出口限制清单，限制软件对中国的授权，哈工大、北航等国内高校被禁止使用 MATLAB。</p>
-<p>这个时候开源软件便体现出它独到的优越性，FSF（自由软件基金会），Apache基金会和Linux基金会都宣布已经发布的开源软件不会受美国清单的影响。</p>
-<p>RMS说</p>
-<blockquote>
-<p>学校应该教授开源软件的使用，这是帮助他们在信息社会成为独立的人；保证社会不被高科技公司所垄断。教授闭源软件是在培养学生的依赖性，与学校的宗旨背道而驰。</p>
-</blockquote>
-<p>可见，我们都应该支持开源软件，随着开源软件商业生态逐渐形成，开源公司也能实现盈利，开源软件将成为计算机软件的未来。</p>
-<h3>开源从何而来？</h3>
-<p>最早的开源，可以从那场操作系统的战争中讲起。</p>
-<p>1985年，微软发布了Windows1.0操作系统，图形界面的操作系统使电脑开始进入大众的视野，人们不需要再记住许许多多的命令(<del>但有的时候命令行真心方便</del>)就可以使用电脑。苹果紧随其后推出了它们的图形操作系统。</p>
-<p>1990年，Windows 3发布，一个真正可用的大众操作系统，微软的黄金时代开始了。1997年，微软占据了90%的市场。直到现在，Windows仍然是大部分用户使用的操作系统。
-但在微软和苹果打得不可开交的时候，他们没有注意到一名 21 岁的芬兰计算机科学专业学生出现了。十分偶然的，他彻底改变了一切。</p>
-<p>哪些科技巨头忙着竞争的时候，开源和自由软件的先驱也雨后春笋般冒出来，其中之一便是Richard Matthew Stallman, RMS。</p>
-<p>当时，Unix价格高昂，RMS创立了GNU，即"GNU is Not Unix"(<del>发现递归了吗</del>)</p>
-<p>现在，回到那位大学生身上来，他负担不起Unix高昂的费用，但只有Unix才能让他自由地编程，于是，他决定——自己写一个。一不小心地，就改变了世界。</p>
-<p>1991年10月5日，Linus Torvalds提交了第一个Linux内核，包含一万行代码。</p>
-<p>如今，Linux已经包含两千万行代码，超过五千位贡献者，并且击败了微软，成为了统治世界的操作系统，在手机，路由器，服务器等设备上，运行着无数的Linux，我们每个人都成为了受益者。</p>
-<p>Linus Torvalds为什么能成功？GPL起了很大的作用。</p>
-<blockquote>
-<p>微软和苹果这样的公司一直在试图建造软件大教堂，而 Linux 及类似的软件则提供了一个由不同议程和方法组成的巨大集市，集市比大教堂有趣多了。 </p>
-<p>——Eric Raymond</p>
-</blockquote>
-<p>Linux的成功，从一定程度上带动了所有开源软件的发展。</p>
-<p>开源的时代，开始了！</p>
-<h2>开源许可证</h2>
-<p>开源许可证是告诉使用者它们可以干什么，不可以干什么的一种方式，大概就是这么一段话：</p>
-<pre><code class="language-text">我允许你们XXX，我许可你们XXXX，你们可以XXXX，但是，你们必须XXXX，如果你们XXXX了，你们就必须XXXX，对了，对于XXXX这些情况，我可不负责。
-
-<p>你要同意，就用，不同意就别用。如果你用了，但违反了许可证的要求，我可能会告你啊！</code></pre></p>
-<h3>各大许可证简单介绍</h3>
-<p>有一张图简单介绍了开源许可证：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/c2b6ea91513c375d64926f35effdf00e5db.jpg" alt=""></p>
-<h4>GPL</h4>
-<ul>
-<li>可以任意演绎、分发、复制 </li>
-<li>源码开放</li>
-<li>衍生版本必须也使用GPL协议开源
-<ul>
-<li>LGPL允许用类库引用(link)方式使用LGPL类库而不需要开源商业软件的代码</li>
-</ul></li>
-</ul>
-<p>Linux就是通过GPL开源的</p>
-<h4>MIT</h4>
-<ul>
-<li>保留源作者版权声明</li>
-<li>没有其它任何限制</li>
-</ul>
-<p>Gridea(洛谷日报曾介绍过的博客系统)通过MIT开源</p>
-<h4>BSD</h4>
-<p>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/127140">@BillZhou233</a>补充)BSD 许可证分为 BSD-2 和 BSD-3，前者大概等效于 MIT，后者在前者基础上追加了 <strong>不能以源作者的名字宣传你的衍生版本</strong> 这项规定，文章中的 BSD 许可证其实是指代的 BSD-3。</p>
-<ul>
-<li>保留版权声明</li>
-<li>不能以源作者的名字宣传你的衍生版本</li>
-<li>没有其它限制</li>
-</ul>
-<p>Chromium通过BSD开源</p>
-<h4>Apache</h4>
-<ul>
-<li>可以任意演绎、复制、分发等</li>
-<li>保留版权声明</li>
-<li>二次开发必须写明修改内容</li>
-</ul>
-<h3>如何使用开源许可证</h3>
-<p>作为作者</p>
-<ul>
-<li>
-<p>在一级目录下，给出一个LICENSE（或COPYING）文件，里面就是这个许可证的全文。</p>
-</li>
-<li>
-<p>在所有的源码头部，说明版权，说明许可。</p>
-</li>
-</ul>
-<p>如图
-<img src="https://oscimg.oschina.net/oscnet/adeef80f4b1f1d09cdc826df2801aa41f9a.png" alt=""></p>
-<p>在开源许可证中，用下面的方式写版权是非常好的：版权属于<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo><mo>×</mo><mo>×</mo></mrow><annotation encoding="application/x-tex">\times \times \times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord">×</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord">×</span></span></span></span></span>和所有贡献者
-<img src="https://5b0988e595225.cdn.sohucs.com/images/20200512/20408a1f6047475b99b4eca0e546367f.jpeg" alt=""></p>
-<p>作为使用者，您应该说明引用了哪些其它开源项目，谷歌的浏览器在这一点是一个典范。</p>
-<p><img src="https://oscimg.oschina.net/oscnet/eb01d85e208f7934457d71b078d72329244.png" alt=""></p>
-<p><img src="https://oscimg.oschina.net/oscnet/7ef84fdce6cc84823ed88e69a3d137640d1.png" alt=""></p>
-<h2>文档共享协议</h2>
-<p>“醉翁之意不在酒，在乎山水之间也”</p>
-<p>喜欢开源软件，喜欢的是开源精神，软件只是一个形式，文档和其它作品也有“开源”的协议。</p>
-<h3>cc0协议</h3>
-<p>最大限度地放弃知识产权，就是在法律限度内放弃了所有权利，洛谷首页挂的Blue的博客就是通过这种方式共享的。</p>
-<p>(<em><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/383773">@EnderCrystal</a>补充</em>)但中国大陆法律规定不得放弃著作权，所以在这里CC0是无效的。而这样来看的话，Blue相当于按照CC0放弃了权利，但他却无法放弃责任。</p>
-<h3>CC协议</h3>
-<p>CC后面可以加上以下后缀改变授权方式。</p>
-<ul>
-<li>姓名标示（BY）：您可以自由复制、散布、展示及演出本作品；您必须按照作者或授权人所指定的方式，保留其姓名标示。</li>
-<li>非商业性（NC）：您可以自由复制、散布、展示及演出本作品；您不得为商业目的而使用本作品。</li>
-<li>禁止改作（ND）：你可以自由复制、散布、展示及演出本作品；您不得改变、转变或改作本作品。</li>
-<li>相同方式分享（SA）：你可以自由复制、散布、展示及演出本作品；若您改变、转变或改作本作品，仅在遵守与本著作相同的授权条款下，您才能散布由本作品产生的衍生作品。</li>
-</ul>
-<p>如本文采用<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>许可证进行许可。</p>
-<h2>最后的话</h2>
-<p>在我们学校的名人墙上，<strong>为自己赚钱写程序比尔盖茨，乔布斯昂首挺胸，而不拿钱的，为全人类做出巨大贡献的RMS，Linus Torvalds却不见踪影</strong>，这也体现了国内开源文化的短板</p>
-<p>很快，明年，或再下一年，<code>Python</code>就要加入初中的课本了。</p>
-<p>希望各位一线教师们，在传授<code>Python</code>语法的同时，也能顺便普及一些开源思想，普及一下GitHub这样的开源平台。</p>
-<p>虽然美国现行法律不会影响开源软件的出口，但现在大量开源的使用，使我国的技术依然受制于人。</p>
-<p>解决的办法，就是发展我们自己的开源平台和开源软件。</p>
-<p>开源的愿望很美好，祝福开源的未来会更光明！</p>
-<h2>参考</h2>
-<ul>
-<li>
-<p>开源中国：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1665536968387234930&amp;wfr=spider&amp;for=pc">从 Copyright 到 Copyleft，聊聊版权与开源协议</a></p>
-</li>
-<li>
-<p>开源中国：<a target="_blank" rel="noopener" href="https://www.sohu.com/a/394741563_827544">步进式解读Apache许可证 </a></p>
-</li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81/114160?fromtitle=%E5%BC%80%E6%BA%90&amp;fromid=20720669#viewPageContent">百度百科：开源</a></p>
-</li>
-</ul>
-<ul>
-<li>
-<p>卫Sir：<a target="_blank" rel="noopener" href="https://my.oschina.net/u/3799215/blog/4334195">从MIT协议谈契约精神</a></p>
-</li>
-<li>
-<p>RedHat:<a target="_blank" rel="noopener" href="https://www.redhat.com/en/command-line-heroes">Command Line Heros</a></p>
-</li>
-</ul>
-<br>
-
-
-
-<blockquote>
-<p>原作者: Acfboy<br>原文链接: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/Acfboy/kai-yuan-shi-shi-me-neng-chi-ma-post">https://www.luogu.com.cn/blog/Acfboy/kai-yuan-shi-shi-me-neng-chi-ma-post</a><br>原文按照 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a> 协议发布，转载请注明出处。  </p>
-</blockquote>
 
       
     </div>
