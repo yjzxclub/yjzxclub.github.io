@@ -129,7 +129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,6 +174,142 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/022788db1353/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/022788db1353/" class="post-title-link" itemprop="url">JS —— 第一步</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-26 16:15:53" itemprop="dateCreated datePublished" datetime="2021-09-26T16:15:53+08:00">2021-09-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-31 08:29:43" itemprop="dateModified" datetime="2021-10-31T08:29:43+08:00">2021-10-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JS/First_steps/What_is_JavaScript">https://developer.mozilla.org/zh-CN/docs/Learn/JS/First_steps/What_is_JavaScript</a></li>
+</ul>
+<p>JavaScript（以下简称 JS）是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等。</p>
+<p>它是标准 Web 技术蛋糕的第三层，其中 HTML 和 CSS 我们已经在其他部分进行了详细的讲解。</p>
+<p>JS 的应用场合极其广泛，简单到幻灯片、照片库、浮动布局和响应按钮点击，复杂到游戏、2D/3D 动画、大型数据库驱动程序等等。这里我们讲的主要是浏览器里面的 JS 。当然配合 Nodejs 你也可以让 JS 成为一个应用程序。</p>
+<p>JS 所做的，就是让网页“动”起来，让网页不再是一些静态的文本和样式，而拥有实际的功能（比如登录帐号，上传文件之类）。加上了这个之后，我们总算是可以做出一个具有完整的功能的网站了。</p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>JS 的可以使用应用程序接口（Application Programming Interfaces（API）），它们可以用来操作很多的。API 是已经建立好的一套代码组件，可以让开发者实现原本很难甚至无法实现的程序。</p>
+<p>就像现成的家具套件之于家居建设，用一些已经切好的木板组装一个书柜，显然比自己设计，寻找合适的木材，裁切至合适的尺寸和形状，找到正确尺寸的螺钉，再组装成书柜要简单得多。而且使用 API 还可以方便别人理解你的代码。</p>
+<p>我们最常用的 API 就是 DOM（Document Object Model——文档对象模型），它用来对 HTML 进行一些读取和修改操作，这也是很多网站的动态效果的实现形式（不过能用 CSS 实现的还是尽量选择 CSS 比较好）。以后我们会做详细介绍。</p>
+<p>当然你也可以使用其他的 API，比方说你可以调用 Canvas API 来绘制图形，或者调用地图的 API 来了解当前位置之类。我们的教程暂时不会涉及这些，你以后可以自己查阅它们的文档进行使用。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>编程语言里面，很重要的一点就是算法。算法相当于是下一系列的指令给计算机，让计算机执行得到结果并且输出。这和让人去做一些事情是一样的。比如导航指路的时候：</p>
+<blockquote>
+<p>100 米后右转<br>直行 500 米<br>掉头<br>……</p>
+</blockquote>
+<p>这里一系列的指令就可以看成是算法。只是为了让电脑看懂，我们使用的语言从中文变成了编程语言。</p>
+<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><p>按照所有编程语言教程的惯例，我们会实现一个输出 <code>Hello world!</code> 的程序，用来演示如何运行 JS 。</p>
+<h3 id="Web-控制台"><a href="#Web-控制台" class="headerlink" title="Web 控制台"></a>Web 控制台</h3><p>运行 JS 代码最好的地方，当然是浏览器。</p>
+<p>打开浏览器，在一个标签页下面打开控制台（通常是按下 <code>F12</code> 来打开），你会看到浏览器的调试窗口，转到 <strong>控制台（Console）</strong>，就可以在这里直接运行一些简单的 JS 代码了（别问我为啥无痕）。</p>
+<p><img src="1_console.png"></p>
+<p>在这个控制台当中输入下面的内容，就可以输出一个 <code>Hello world!</code> 了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Hello world!&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>运行起来大概是这样。</p>
+<p><img src="1_hello-world.png"></p>
+<p>下面那个 <code>undefined</code> 我们以后再解释。我们这个例子写成纯文字版本就是这样子（ <code>&gt;&gt;&gt;</code> 不是代码，只是用来表示这是个输入）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">console</span>.log(<span class="string">&quot;Hello world!&quot;</span>);</span><br><span class="line">Hello world!</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="导入你的-JS"><a href="#导入你的-JS" class="headerlink" title="导入你的 JS"></a>导入你的 JS</h2><p>一般情况下面，我们会在 HTML 里面链接 JS（你总没有见过啥网站要你打开控制台输入代码的吧）。我们使用 <code>&lt;script&gt;&lt;/script&gt;</code> 标签来在 HTML 的 <code>&lt;body&gt;</code> 当中最末尾的地方插入 JS ，这是因为 HTML 是从上到下解析的，如果需要操作的东西排在 JS 后面，就不能被正常解析。下面是一些方式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 内部 JS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;Hello, I am a JS CODE!&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;Hello, I am the second line!&quot;</span>);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 导入同目录下的 hello.js --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;hello.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 导入其他的外链 JS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://一个脚本的 URL&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后浏览器就会自动执行这些嵌入的 JS。</p>
+<p>比如我们可以新建一个 <code>hello.js</code> 内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Hello world!&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后我们在同目录新建 <code>index.html</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>JS Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>js...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 导入同目录下的 hello.js --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;hello.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着在浏览器里面打开，就可以在控制台里面看到 <code>Hello world!</code> 了。</p>
+<p><img src="1_hello-extern.png"></p>
+<h2 id="运行原理概述"><a href="#运行原理概述" class="headerlink" title="运行原理概述"></a>运行原理概述</h2><p>JS 是一种解释型语言。浏览器得到一段 JS 代码之后，就可以从上到下逐行读取代码，然后按照自己的方式去运行它们。比如我们刚刚的那个 Hello world 的示例程序，被浏览器读取后，浏览器在控制台里面留下了一行 <code>Hello world!</code> 。这就相当于一行一行告诉浏览器应该做什么，然后浏览器解析它得到结果。</p>
+<p>当浏览器执行到一段 JS 代码时，通常会按从上往下的顺序执行这段代码。也就是你有时候需要注意一些顺序问题。如果你后面的代码需要用到前面的东西，比方说声明一个变量，你就要保证这两者的顺序。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>学习编程，语法本身并不难，真正困难的是如何应用它来解决现实世界的问题。 你要开始像程序员那样思考。一般来讲，这种思考包括了解你程序运行的目的，为达到该目的应选定的代码类型，以及如何使这些代码协同运行。想办法用一些数学模型去概括一些实际问题，这会非常有用。</p>
+<p>现在 JS 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一课我们要开始介绍变量。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1803,125 +1939,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/455a007a1c84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="怺加冢穴计算机社团">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="怺加冢穴-博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/455a007a1c84/" class="post-title-link" itemprop="url">HTML：7——排版布局</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-08 13:34:56" itemprop="dateCreated datePublished" datetime="2021-09-08T13:34:56+08:00">2021-09-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-31 15:44:03" itemprop="dateModified" datetime="2021-10-31T15:44:03+08:00">2021-10-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure</a></li>
-</ul>
-<p>现在我们已经学习了网页的很多元素了。那么下一步，我们就要开始做一个真正的网页。  </p>
-<blockquote>
-<p>网页的外观多种多样，但是除了全屏视频或游戏，或艺术作品页面，或只是结构不当的页面以外，都倾向于使用类似的标准组件：  </p>
-<h3 id="页眉"><a href="#页眉" class="headerlink" title="页眉"></a>页眉</h3><p>通常横跨于整个页面顶部有一个大标题 和/或 一个标志。 这是网站的主要一般信息，通常存在于所有网页。  </p>
-<h3 id="导航栏"><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h3><p>指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 无障碍访问特性，因为屏幕阅读器可以更清晰地分辨二者。  </p>
-<h3 id="主内容"><a href="#主内容" class="headerlink" title="主内容"></a>主内容</h3><p>中心的大部分区域是当前网页大多数的独有内容，例如视频、文章、地图、新闻等。这些内容是网站的一部分，且会因页面而异。  </p>
-<h3 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h3><p>一些外围信息、链接、引用、广告等。通常与主内容相关（例如一个新闻页面上，侧边栏可能包含作者信息或相关文章链接），还可能存在其他的重复元素，如辅助导航系统。  </p>
-<h3 id="页脚"><a href="#页脚" class="headerlink" title="页脚"></a>页脚</h3><p>横跨页面底部的狭长区域。和标题一样，页脚是放置公共信息（比如版权声明或联系方式）的，一般使用较小字体，且通常为次要内容。 还可以通过提供快速访问链接来进行 SEO（搜索引擎优化）。  </p>
-</blockquote>
-<p>一个典型的网页可能是这样的：  </p>
-<p><img src="7_typical-website.png" alt="典型的网页"></p>
-<p>不过大部分网页都有一些不同。比如说百度的搜索李彦宏泼水的结果页面。  </p>
-<p><img src="7_baidu-liyanhong.png" alt="百度搜李彦宏泼水"></p>
-<p>当然要达到这样的效果肯定是需要CSS的。但是我们先写HTML。  </p>
-<p>首先介绍<code>&lt;div&gt;</code>。这个元素是一个块级元素，像是一个盒子，你可以往里面塞很多各种各样的元素。div里塞div也是可行的。</p>
-<p>在HTML5之前，前端工程师们通常使用多个加了id或class的div元素来实现这些内容。然而在HTML5中有很多语义化的标签可以替代这些div：</p>
-<p><code>&lt;header&gt;</code>：页眉。<br><code>&lt;nav&gt;</code>：导航栏。<br><code>&lt;main&gt;</code>：主内容。主内容中还可以有各种子内容区段，可用<code>&lt;article&gt;</code>、<code>&lt;section&gt;</code> 和 <code>&lt;div&gt;</code> 等元素表示。<br><code>&lt;aside&gt;</code>：侧边栏，经常嵌套在 <code>&lt;main&gt;</code> 中。<br><code>&lt;footer&gt;</code>：页脚。  </p>
-<p>比如上面那个“典型的网页”，可以这么写（仅body部分内容）：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>聆听电子天籁之音<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>主页<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>作品<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>项目<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;search-box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;search&quot;</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">id</span>=<span class="string">&quot;search&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;要搜索的内容&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">name</span>=<span class="string">&quot;search-button&quot;</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">article</span>&gt;</span></span><br><span class="line">        以下省略2147483647字</span><br><span class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--因为侧边栏在右边，所以aside写article下面。</span></span><br><span class="line"><span class="comment">        如果侧边栏在左边的话应该写在article上面--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>相关链接<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;qwertyuiop&quot;</span>&gt;</span>言和<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;asdfghjkl&quot;</span>&gt;</span>乐正绫<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--不想写了，就这么多吧--&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">    <span class="symbol">&amp;copy;</span>2042-2077 ？？？保留所有权利</span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>浏览上面的代码，可以看见：</p>
-<p>1.HTML的内容确实可以换行写。比如那个input，还有注释都换行了。<br>2.一般来说，导航栏都使用无序列表实现。别看无序列表似乎和导航栏完全不像，CSS渲染之后就好了。<br>3.<code>&amp;copy;</code>——还记得实体引用吗？这也是。<br>4.注意那个id=”search-box”的div。其实拆开来也没什么关系，但是写div里更清楚一点，也方便写CSS。</p>
-<p>至于input和button元素，我们以后讲——也许会讲吧。  </p>
-<p>好了，接下来我们可以真正地制作自己的网页了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1935,7 +1952,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
