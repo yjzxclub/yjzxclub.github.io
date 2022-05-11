@@ -50,9 +50,9 @@
 
 
 
-  <noscript>
+  
     <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -283,7 +283,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;GCVillager&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>还有一个例子，可以认为是对页面的简要描述：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;The MDN Learning Area aims to provide</span></span></span><br><span class="line"><span class="tag"><span class="string">complete beginners to the Web with all they need to know to get</span></span></span><br><span class="line"><span class="tag"><span class="string">started with developing web sites and applications.&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;The MDN Learning Area aims to provide</span></span></span><br><span class="line"><span class="string"><span class="tag">complete beginners to the Web with all they need to know to get</span></span></span><br><span class="line"><span class="string"><span class="tag">started with developing web sites and applications.&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>你还可以定义各种各样的元数据。<br>如果你学过一门编程语言的话，就会觉得，这有点像是<code>author=&quot;GCVillager&quot;</code>之类的表达式。（这句话看不懂就算了）。<br>指定包含关于页面内容的关键字的页面内容的描述是很有用的，因为它可能或让你的页面在搜索引擎的相关的搜索出现得更多。（内卷！）  </p>
 <h2 id="lt-title-gt-：标题"><a href="#lt-title-gt-：标题" class="headerlink" title="&lt;title&gt;：标题"></a><code>&lt;title&gt;</code>：标题</h2><p>这个标题是浏览器的标签页上的那个标题，不是用<code>&lt;h1&gt;</code>写的标题。如图所示：<br><img src="5_title-and-h1.png" alt="title和h1">  </p>
@@ -309,7 +309,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;my-js-file.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>这里的src是source的缩写，和href其实有点像。注意，<code>&lt;script&gt;</code>并不是空元素，所以要有闭合标签。<br>还有一种方式引入Javascript，就是直接写在里面：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">boring</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> i=<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> i+<span class="number">1</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">boring</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">let</span> i=<span class="number">1</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> i+<span class="number">1</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>刚刚写在里面的就是一段Javascript代码。（至于JS代码怎么写，就是以后的事情了）  </p>
 <p>GCV写累了，表格我们下次再说。</p>

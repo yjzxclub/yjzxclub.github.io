@@ -54,9 +54,9 @@
 
 
 
-  <noscript>
+  
     <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -385,11 +385,11 @@
 <p>如果我们应用 <code>text-align: center;</code> 到一个页面的 <code>&lt;h1&gt;</code> 元素中，结果如下：</p>
 <p><img src="3_center.png"></p>
 <h3 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h3><p> <code>line-height</code> 属性设置文本每行之间的高，可以接受大多数单位，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 <code>font-size</code> (字体大小)来获得 <code>line-height</code> 行高）。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">line-height: 1.5;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">line-height: 1.5;</span><br></pre></td></tr></table></figure>
 
 <h3 id="字母和单词间距"><a href="#字母和单词间距" class="headerlink" title="字母和单词间距"></a>字母和单词间距</h3><p><code>letter-spacing</code> 和 <code>word-spacing</code> 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，尤其是中文的网站下面，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位。</p>
 <p>所以作为例子，如果我们把这个样式应用到我们的示例中的 <code>&lt;p&gt;</code> 段落的第一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p::first-line &#123;</span><br><span class="line">  letter-spacing: 2px;</span><br><span class="line">  word-spacing: 4px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p::first-line &#123;</span><br><span class="line">  letter-spacing: 2px;</span><br><span class="line">  word-spacing: 4px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="3_word-spacing.png"></p>
 <h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p>以上属性让你了解如何开始在网页上设置文本，但是你可以使用更多的属性。我们只是想介绍最重要的。你也可以通过 MDN 文档去了解其他更多的属性，然后自己试着用上。</p>
@@ -402,20 +402,20 @@
 <p><img src="3_color-example.png"></p>
 <h2 id="颜色设置方式"><a href="#颜色设置方式" class="headerlink" title="颜色设置方式"></a>颜色设置方式</h2><p>下面列举了一系列的可用的值。至于具体要设置什么颜色，那还是自己去调色盘调着上面看下有啥好看的吧，毕竟这是美术范畴，超出计算机方面了，我也无能为力。讲的还是会比较简单，有些内容会省略不讲，有兴趣可以自己看下 MDN 的文档：（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color">https://developer.mozilla.org/zh-CN/docs/Web/CSS/color</a>）</p>
 <h3 id="颜色名"><a href="#颜色名" class="headerlink" title="颜色名"></a>颜色名</h3><p>这个最简单了，具体有多少种颜色自己可以去找文档。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: red;</span><br><span class="line">color: orange;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: red;</span><br><span class="line">color: orange;</span><br></pre></td></tr></table></figure>
 
 <h3 id="16-进制颜色"><a href="#16-进制颜色" class="headerlink" title="16 进制颜色"></a>16 进制颜色</h3><p>由一个 <code>#</code> 打头的十六进制数字设置，符号由红色、绿色和蓝色的值组成，就是把 RGB 直接写成一个数字。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: #090;</span><br><span class="line">color: #009900;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: #090;</span><br><span class="line">color: #009900;</span><br></pre></td></tr></table></figure>
 
 <h3 id="rgb-和-rgba"><a href="#rgb-和-rgba" class="headerlink" title="rgb() 和 rgba()"></a>rgb() 和 rgba()</h3><p>rgb() 和 rgba() 这里两个函数在 CSS 最新标准里面是同一个东西可以指定三个 RGB 颜色值和一个可选的透明度值。不过旧的实现可能只有 rgb() 函数，而且没有透明度值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">color: rgb(34, 12, 64);</span><br><span class="line">color: rgb(34, 12, 64, 0.6);</span><br><span class="line">color: rgba(34, 12, 64, 0.6);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">color: rgb(34, 12, 64);</span><br><span class="line">color: rgb(34, 12, 64, 0.6);</span><br><span class="line">color: rgba(34, 12, 64, 0.6);</span><br></pre></td></tr></table></figure>
 
 <h3 id="hsl"><a href="#hsl" class="headerlink" title="hsl()"></a>hsl()</h3><p>这个好像不是特别常用，不过也是可以设置的。具体可以搜索下啥是 HSL，这里懒得讲</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: hsl(30, 100%, 50%, 0.6);</span><br><span class="line">color: hsla(30, 100%, 50%, 0.6);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">color: hsl(30, 100%, 50%, 0.6);</span><br><span class="line">color: hsla(30, 100%, 50%, 0.6);</span><br></pre></td></tr></table></figure>
 
 <h2 id="图片背景"><a href="#图片背景" class="headerlink" title="图片背景"></a>图片背景</h2><p>虽然图片背景好像和这里没啥关系，不过既然提到背景了那也一起讲了，防止以后又要单独开章节补。</p>
 <p><code>background-image</code> 属性用于为一个元素设置一个或者多个背景图像。接受一个图片的 URL 作为参数。例如下面：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-image:</span><br><span class="line">      url(&quot;https:&#x2F;&#x2F;mdn.mozillademos.org&#x2F;files&#x2F;6457&#x2F;mdn_logo_only_color.png&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-image:</span><br><span class="line">      url(&quot;https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png&quot;);</span><br></pre></td></tr></table></figure>
 
 <h2 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h2><p>多列布局，通常也简写为 multicol，我们将会给出多列布局的具体例子。</p>
 <p>在下面的 HTML 里面，我们会把内容放在一个 <code>&lt;div&gt;</code> 里面，它带有一个<br><code>container</code> 类。我们会将它作为一个放置文本的容器，来进行一个展示。</p>

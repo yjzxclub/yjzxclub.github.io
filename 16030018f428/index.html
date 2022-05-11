@@ -50,9 +50,9 @@
 
 
 
-  <noscript>
+  
     <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -492,7 +492,7 @@ width heightwidth&#x3D;&quot;960px&quot; height&#x3D;&quot;540px&quot;的意思�
 
 <p>由于GCVillager是__________，所以这里还是放那张__________。<br>首先回顾一下，src、alt等都是属性，用空格分隔。属性值最好用引号括起来，否则可能出错（单双引号都可以，但是前后必须一致。比如说，<code>alt=&quot;一张伍六七的图片&#39;</code>就是错误的，浏览器可能无法理解。）接着我们来了解一下各个属性。  </p>
 <h3 id="src"><a href="#src" class="headerlink" title="src"></a>src</h3><p>src是source的缩写，很好理解，就是图片的链接。链接可以是<strong>相对路径</strong>，也可以是<strong>绝对路径</strong>。举个例子，“我们机房隔壁是广播室”，这就是相对路径；而“广播室在浙江省永嘉县永嘉中学图书馆4楼四零几室”就是绝对路径。<br>比如说，假设<code>scissor-seven-picture.jpg</code>和你的HTML在同一个路径下（也就是同一个文件夹内），你的src就可以直接写<code>scissor-seven-picture.jpg</code>。<br>那要是这个文件在一个叫img的文件夹内，而img和你的网页同目录（文件夹）（如下图）呢？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--html（文件夹）  </span><br><span class="line">    --index.html  </span><br><span class="line">    --img（文件夹）  </span><br><span class="line">        --scissor-seven-picture.jpg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--html（文件夹）  </span><br><span class="line">    --index.html  </span><br><span class="line">    --img（文件夹）  </span><br><span class="line">        --scissor-seven-picture.jpg</span><br></pre></td></tr></table></figure>
 
 <p>那就输入<code>img/scissor-seven-picture.jpg</code>。<br>上面这两个就属于相对路径表示法。而像<code>https://yjzx-site.github.io/img/club-file/scissor-seven-picture.jpg</code>这样的路径就是绝对路径。可以这么说：最前面写了<code>https://</code> 和域名的就是绝对路径，如果没有写，那就是相对路径。<br>在相对路径表示法里，还有<code>.</code>和<code>..</code>。<code>.</code>代表当前路径，所以<code>./a.png</code>和<code>a.png</code>代表的是同一个东西。<code>..</code>代表上层目录，比如说你的某个文件是<code>https://amdyes.net/docs/index.html</code>，同路径下有一个<code>a.png</code>，那么对<code>index.html</code>来说，<code>a.png</code>和<code>../docs/a.png</code>是同一个文件。<br>使用怎样的表示法，看具体情况。比如你的网站结构里，这些东西可能就是在同一个路径下的，那使用相对路径会比较方便，而且如果你换了自己网站的域名，也不容易出现图片无法显示的问题（比如说，你的网站叫yjzx.club，后来换成了yjzx.com，因为你的图片链接原先是<code>https://yjzx.club/a.png</code>，就会出现找不到图片的情况；但是相对路径就不会）；如果你的图片在别的网站上，那就必须用绝对路径。</p>
 <h3 id="alt"><a href="#alt" class="headerlink" title="alt"></a>alt</h3><p>如果因为图片炸了，或者是视障人员，就需要使用alt属性。如果写了<code>alt=&quot;一张伍六七的图片&quot;</code>，并且图片炸了（比如说我们倒闭了），就会显示alt里的内容，而如果能够显示图片，就不会显示alt的内容。但是使用屏幕阅读器的人可能需要听alt里的内容。<br>图片加载不出来就会这样：</p>

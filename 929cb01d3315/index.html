@@ -47,9 +47,9 @@
 
 
 
-  <noscript>
+  
     <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -281,7 +281,7 @@
 <p>这里就多了一个把所有的 <code>&lt;p&gt;</code> 里面的字都设置成黑色的规则。</p>
 <h2 id="属性一览"><a href="#属性一览" class="headerlink" title="属性一览"></a>属性一览</h2><p>因为属性太多，我们不可能一下子全部列出。这一系列的教程可能会把属性随着进度慢慢地讲出来，而不是单独分成一个专题。所以</p>
 <h3 id="color"><a href="#color" class="headerlink" title="color"></a>color</h3><p>顾名思义，这就是颜色相关的属性，准确来说这是前景色（通常是文本颜色），还可以用 <code>background-color</code> 来设置背景色。刚刚我们提到的是用颜色名称来设置。实际上颜色还可以不止通过这种方式。例如用 <code>rgb</code> 或者 <code>rgba</code>，或者十六进制颜色值。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>) /*设置成白色*/</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">204</span>, <span class="number">0.8</span>) /*淡黄色 <span class="number">20%</span> 透明*/</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0000FF</span>;<span class="comment">/*蓝色*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>) <span class="comment">/*设置成白色*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">204</span>, <span class="number">0.8</span>) <span class="comment">/*淡黄色 20% 透明*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0000FF</span>;<span class="comment">/*蓝色*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>更多的内容可以去 MDN 上搜索 <code>color</code> 去看详细的介绍。</p>
 <h3 id="font"><a href="#font" class="headerlink" title="font"></a>font</h3><p>font 相关的都是字体的属性。其中包括了字体，字号和类型等等。</p>
@@ -290,7 +290,7 @@
 
 <p>其中第一个 <code>px</code> 结尾的就是以像素大小为单位的绝对大小，第二个 <code>em</code> 是以字号为单位的相对大小。使用相对大小有利于去适应不同的设备，我们推荐使用 <code>em</code> 的方式。通常情况下，电脑浏览器上 <code>1em</code> 等于 <code>16px</code>。如果对个别字进行操作，也可以是使用缩放。</p>
 <p>设置字体的是 <code>font-family</code> 属性。这个属性可以指定字体。你可以给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">font-family: Georgia, serif; &#x2F;*使用 Georgia 字体，如果没有选择默认衬线字体*&#x2F;</span><br><span class="line">font-family: sans-serif;&#x2F;*使用无衬线字体*&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">font-family: Georgia, serif; /*使用 Georgia 字体，如果没有选择默认衬线字体*/</span><br><span class="line">font-family: sans-serif;/*使用无衬线字体*/</span><br></pre></td></tr></table></figure>
 
 <p><code>font-style</code> 用来设置斜体。例如 <code>font-style: italic</code> 设置字体为斜体。</p>
 <p><code>font-weight</code> 设置粗体。<code>font-weight: bold</code> 将字体设置成粗体。</p>
