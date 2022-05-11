@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;yjzxclub.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}">
+<meta name="description" content="地图 project这是一个简单的团队合作的挑战项目，主要锻炼前端编程能力以及团队协作的能力。 需求介绍Tux 前不久接到了一个任务，要做个小游戏。结果把这个事情忘记了，现在对面要看进度，但是它只画了一些地图。为了糊弄对方，现在需要你写个网页展示这些地图，假装这个游戏正在开发。 地图是一个 .zip 格式的文件，根目录下面有这么些文件 12345678wall.pngfloor.pngstart.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个小小测试">
+<meta property="og:url" content="https://yjzxclub.github.io/7bfd70ec9a3f/index.html">
+<meta property="og:site_name" content="怺加冢穴-博客">
+<meta property="og:description" content="地图 project这是一个简单的团队合作的挑战项目，主要锻炼前端编程能力以及团队协作的能力。 需求介绍Tux 前不久接到了一个任务，要做个小游戏。结果把这个事情忘记了，现在对面要看进度，但是它只画了一些地图。为了糊弄对方，现在需要你写个网页展示这些地图，假装这个游戏正在开发。 地图是一个 .zip 格式的文件，根目录下面有这么些文件 12345678wall.pngfloor.pngstart.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/start.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/floor.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/end.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/dragfile.png">
+<meta property="og:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/preview.png">
+<meta property="article:published_time" content="2022-05-11T08:28:26.000Z">
+<meta property="article:modified_time" content="2022-05-11T08:29:47.428Z">
+<meta property="article:author" content="怺加冢穴计算机社团">
+<meta property="article:tag" content="公告">
+<meta property="article:tag" content="期末">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yjzxclub.github.io/7bfd70ec9a3f/wall.png">
+
+
+<link rel="canonical" href="https://yjzxclub.github.io/7bfd70ec9a3f/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content="">
+<title>一个小小测试 | 怺加冢穴-博客</title><script data-pjax src="/js/load-config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">怺加冢穴-博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/custom_logo.png" alt="怺加冢穴-博客">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-教程"><a href="/categories/%E6%95%99%E7%A8%8B/" rel="section"><i class="fa fa-book fa-fw"></i>教程</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%B0%E5%9B%BE-project"><span class="nav-number">1.</span> <span class="nav-text">地图 project</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">需求介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E4%B8%8E%E6%8F%90%E7%A4%BA"><span class="nav-number">1.2.</span> <span class="nav-text">帮助与提示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9"><span class="nav-number">1.2.1.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA"><span class="nav-number">1.2.2.</span> <span class="nav-text">提示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%84%E5%88%86%E6%A0%87%E5%87%86"><span class="nav-number">1.3.</span> <span class="nav-text">评分标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-60%E5%88%86"><span class="nav-number">1.3.1.</span> <span class="nav-text">功能 (60分)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI-40%E5%88%86"><span class="nav-number">1.3.2.</span> <span class="nav-text">UI (40分)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">怺加冢穴计算机社团</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/7bfd70ec9a3f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一个小小测试
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-11 16:28:26 / 修改时间：16:29:47" itemprop="dateCreated datePublished" datetime="2022-05-11T16:28:26+08:00">2022-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="地图-project"><a href="#地图-project" class="headerlink" title="地图 project"></a>地图 project</h1><p>这是一个简单的团队合作的挑战项目，主要锻炼前端编程能力以及团队协作的能力。</p>
+<h2 id="需求介绍"><a href="#需求介绍" class="headerlink" title="需求介绍"></a>需求介绍</h2><p>Tux 前不久接到了一个任务，要做个小游戏。结果把这个事情忘记了，现在对面要看进度，但是它只画了一些地图。为了糊弄对方，现在需要你写个网页展示这些地图，假装这个游戏正在开发。</p>
+<p>地图是一个 .zip 格式的文件，根目录下面有这么些文件</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wall.png</span><br><span class="line">floor.png</span><br><span class="line">start.png</span><br><span class="line">end.png</span><br><span class="line">mp1.txt</span><br><span class="line">mp2.txt</span><br><span class="line">...</span><br><span class="line">mp*.txt</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>mp*.txt</code> 是地图，**可能有一个或者多个(最多九个，不用考虑两位数)**。<code>*.png</code> 则是一些图片文件，每一张 <code>32px*32px</code> 大小。这四个张用来显示地图。</p>
+<p>mp*.txt 里面的内容是一个 N*M 的矩阵(N &lt;= 20, M &lt;= 20) (也就是最大面积 640*640 像素)，大概看起来是这样的。(当然实际上肯定不是这样子的，不然就可以直接写成静态网页了)</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">########</span><br><span class="line">##....##</span><br><span class="line">#..##..#</span><br><span class="line">#S###.##</span><br><span class="line">#...#.E#</span><br><span class="line">########</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>#</code> 代表墙壁 (wall.png)，<code>.</code> 表示地板 (floor.png)， <code>S</code> 表示开始 (start.png)，<code>E</code> 表示结束 (end.png)。</p>
+<p>你需要的是把它显示出来，每个字符对应成一张小型图片，这样排列成为一个二维的地图，比如这样子：</p>
+<div style="line-height:0;">
+<img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><br><img src="./wall.png"/><img src="./wall.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./wall.png"/><img src="./wall.png"/><br><img src="./wall.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./wall.png"/><br><img src="./wall.png"/><img src="./start.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./floor.png"/><img src="./wall.png"/><img src="./wall.png"/><br><img src="./wall.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./floor.png"/><img src="./wall.png"/><img src="./floor.png"/><img src="./end.png"/><img src="./wall.png"/><br><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><img src="./wall.png"/><br>
+</div><br>
+
+<p>鉴于地图应该是存在本地，读档之后进行操作，那么我们的页面应该是要用户手动上传地图文件到页面，之后经过一系列操作，转到另一个显示地图的页面。</p>
+<p>比如可以长这样</p>
+<p><img src="dragfile.png" alt="drag file"></p>
+<p>显示地图的页面最好要支持多个地图。这是一种可能的 UI，通过一个轮播图片的形式来展示，左右按钮进行地图之间的切换。当然你也完全可以用更好的方法。</p>
+<p><img src="preview.png" alt="preview"></p>
+<h2 id="帮助与提示"><a href="#帮助与提示" class="headerlink" title="帮助与提示"></a>帮助与提示</h2><h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><p>解析 zip 包需要用到一个叫做 zip.js 的库。鉴于对上传文件的解析操作过度复杂，而且也不属于前端基本功，我决定自己写好这一个函数，把 input 的 event 里面那个文件的引用传给这个函数，函数就可以把解析好的地图放进一个对象返回回去。这样可以方便大家开发。</p>
+<p>(还在写，参数列表和返回值先定好)</p>
+<p>这是个 async 函数，需要加上 await 调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@typedef</span> &#123;<span class="type">Object</span>&#125; <span class="variable">ResolvedMap</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ObjectURL</span>&#125; <span class="variable">wall</span> - 墙壁图片的引用，下同</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ObjectURL</span>&#125; <span class="variable">floor</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ObjectURL</span>&#125; <span class="variable">start</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ObjectURL</span>&#125; <span class="variable">end</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">Array&lt;String&gt;</span>&#125; <span class="variable">maps</span> - 每个 map 文件的内容的字符串，包括换行（最后文件尾也有换行）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">File</span>&#125; zipFile </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type">ResolvedMap</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">resolve</span>(<span class="params">zipFile</span>) &#123;</span><br><span class="line">    <span class="comment">/** waiting for further update */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个返回值的例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">wall</span>: [一个 <span class="title class_">ObjectURL</span>，直接使用],</span><br><span class="line">    <span class="attr">floor</span>: [同上],</span><br><span class="line">    <span class="attr">start</span>: ,</span><br><span class="line">    <span class="attr">end</span>: ,</span><br><span class="line">    <span class="attr">map</span>: [</span><br><span class="line">        <span class="string">&quot;########\n##....##\n#..##..#\n#S###.##\n#...#.E#\n########&quot;</span>,</span><br><span class="line">        <span class="string">&quot;########\n##....##\n#..##..#\n#S###.##\n#...#.E#\n########&quot;</span>,</span><br><span class="line">        ..</span><br><span class="line">        .</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><ul>
+<li>布局可以使用 bootstrap，可以通过直接下载到本地的方式引入，也可以使用 CDN (例如： <a target="_blank" rel="noopener" href="https://cdn.baomitu.com/">https://cdn.baomitu.com/</a>)</li>
+<li>ObjectURL 是一种文件引用，使用可以看 mdn <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/File/Using_files_from_web_applications#example.3a_using_object_urls_to_display_images">在web应用程序中使用文件</a></li>
+<li>async 是个简单的异步方式 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises</a> 见 async 部分。</li>
+</ul>
+<p>(待更新)</p>
+<h2 id="评分标准"><a href="#评分标准" class="headerlink" title="评分标准"></a>评分标准</h2><p>每点 10 分。</p>
+<h3 id="功能-60分"><a href="#功能-60分" class="headerlink" title="功能 (60分)"></a>功能 (60分)</h3><ul>
+<li>能够拖进文件，并对这个文件进行操作</li>
+<li>能够接受 Myfunc(提供的解析 zip 包函数) 的返回值，并且尝试解析</li>
+<li>成功解析同时尝试打印到 div</li>
+<li>成功打印到一个 div，并可正常显示</li>
+<li>可以进行返回再上传新的地图</li>
+<li>完整，与UI结合</li>
+</ul>
+<h3 id="UI-40分"><a href="#UI-40分" class="headerlink" title="UI (40分)"></a>UI (40分)</h3><ul>
+<li>有一个主页，显示上传控件</li>
+<li>有一个轮播窗口，可以左右切换</li>
+<li>可以显示当前文件名，有“返回上页”到按钮</li>
+<li>要拥有一个美观的页面框架，不要裸控件</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>尼泽·莫伯斯
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yjzxclub.github.io/7bfd70ec9a3f/" title="一个小小测试">https://yjzxclub.github.io/7bfd70ec9a3f/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%85%AC%E5%91%8A/" rel="tag"># 公告</a>
+              <a href="/tags/%E6%9C%9F%E6%9C%AB/" rel="tag"># 期末</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/07747a55465d/" rel="prev" title="项目实践的引入——MD 在线编辑器">
+                  <i class="fa fa-chevron-left"></i> 项目实践的引入——MD 在线编辑器
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/5c65910bdc02/" rel="next" title="开始使用本站">
+                  开始使用本站 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">怺加冢穴计算机社团</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

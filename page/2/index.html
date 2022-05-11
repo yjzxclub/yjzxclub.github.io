@@ -129,7 +129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,6 +174,160 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/9c78021f69ff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/9c78021f69ff/" class="post-title-link" itemprop="url">JS —— 循环结构</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-28 08:35:00 / 修改时间：08:46:42" itemprop="dateCreated datePublished" datetime="2021-10-28T08:35:00+08:00">2021-10-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code">https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration</a></li>
+</ul>
+<p>有时候，我们需要完成一些重复的任务。比方说，现在我要按顺序输出 1 到 32 这些数字，要怎么做？曾经有个伟大的 GCVillager 手动写下了 32 行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">7</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">9</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">12</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">13</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">14</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">15</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">16</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">17</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">18</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">19</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">21</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">22</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">23</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">24</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">25</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">26</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">27</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">28</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">29</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">30</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">31</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">32</span>);</span><br></pre></td></tr></table></figure>
+
+<p>我们肯定不能学他，毕竟要输出 1145141919810 行怎么办？所以就有了今天的主角——循环结构。</p>
+<h2 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h2><p>下面这个代码就可以解决开头的问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123; <span class="comment">// 还记得自增运算符吧</span></span><br><span class="line">    <span class="built_in">console</span>.log(i+<span class="number">1</span>); <span class="comment">// 想想为什么加一</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以这样看到循环的结构是这样的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (初始化语句; 退出条件; 更新语句) &#123;</span><br><span class="line">    一些需要执行的代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到这里的基本结构</p>
+<ol>
+<li>关键字for，后跟一些括号。</li>
+<li>在括号内，我们有三个项目，以分号分隔：<ul>
+<li>初始化语句 - 通常我们会在这里声明一个数字变量，这个变量可以配合后面的更新语句来统计循环当前执行了的次数。它也有时被称为计数变量。</li>
+<li>退出条件 - 用来定义怎么退出循环。这个语句在每轮循环之前都会判断，如果满足条件就进入循环，如果不满足这个条件就退出循环。</li>
+<li>更新语句 - 在每轮循环结束的时候执行。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。</li>
+</ul>
+</li>
+<li>包含一些代码的花括号 - 每次循环时都会运行花括号里面的代码。</li>
+</ol>
+<p>那么我们看下下面的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> info = <span class="string">&#x27;My cats are called &#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.length; i++) &#123;</span><br><span class="line">  info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(info);</span><br></pre></td></tr></table></figure>
+
+<p>这里每次都把 cats 里面的元素加到 info 的末尾，输出就是这样:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>迭代器i从0开始（<code>let i = 0</code>）。</li>
+<li>循环将会一直运行直到 i 不再小于 cats 数组的长度(<code>cats.length</code>)。</li>
+<li>在循环中，我们将当前的 <code>cats[i]</code> 以及逗号和空格拼接 (<code>+=</code>)到 info 变量的末尾。 所以：<ul>
+<li>在第一次运行中，i 为 0，所以 <code>cats[0] +&#39;，&#39;</code> 将被拼接到 info 上。</li>
+<li>在第二次运行中，i 为 1，所以 <code>cats[1] +&#39;，&#39;</code> 将被拼接到 info 上。</li>
+<li>每次循环运行后，i 都会加上 1，然后进程将再次启动，直到退出条件。</li>
+</ul>
+</li>
+<li>当等于 <code>cats.length</code> 时，循环将停止，浏览器将移动到循环下面的下一个代码位。</li>
+</ul>
+<h2 id="使用-break-退出循环"><a href="#使用-break-退出循环" class="headerlink" title="使用 break 退出循环"></a>使用 break 退出循环</h2><p>在循环当中，我们有时候需要在中途退出。还是上面的例子，如果我们需要找到 <code>cats</code> 数组里面的 Jeff 这个名字所在的下标，找到就退出，那可能就要写成这样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> cur;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&#x27;Jeff&#x27;</span> === cats[i] ) &#123;</span><br><span class="line">        cur = i;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(cur);</span><br></pre></td></tr></table></figure>
+
+<p>输出就是</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i = 0</span><br><span class="line">i = 1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>其中循环执行到 <code>i = 1</code> 的时候，循环就因为满足了 if 的条件，然后被 break 语句退出了，没有执行到 <code>i &lt; cats.length</code> 这个条件。</p>
+<h2 id="使用-continue-跳过迭代"><a href="#使用-continue-跳过迭代" class="headerlink" title="使用 continue 跳过迭代"></a>使用 continue 跳过迭代</h2><p>continue语句以类似的方式工作，而不是完全跳出循环，而是跳过当前循环的下面部分，直接进入执行下一个循环。</p>
+<p>比如说我们需要在遇到名字 <code>Jeff</code> 的时候不输出，就可以这么实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&#x27;Jeff&#x27;</span> === cats[i] ) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(cats[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Bill</span><br><span class="line">Pete</span><br><span class="line">Biggles</span><br><span class="line">Jasmin</span><br></pre></td></tr></table></figure>
+
+<p>这里在名称是 <code>Jeff</code> 的时候，<code>continue</code> 语句被执行，导致了后面的语句跳过去了，所以只有 <code>Jeff</code> 没有输出。</p>
+<h2 id="while-和-do-while-循环"><a href="#while-和-do-while-循环" class="headerlink" title="while 和 do while 循环"></a>while 和 do while 循环</h2><p>除了 for 循环之外， JS 还有两种循环：while 和 do while 循环。while 循环只有在入口处包含一个条件判断语句，如果满足就会进入循环。</p>
+<p>比如之前的那个打印 cats 数组内容的程序，使用 while 循环我们就可以写成这个样子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> info = <span class="string">&#x27;My cats are called &#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;<span class="comment">// 初始化语句被放在外面了，成了一个普通的声明变量</span></span><br><span class="line"><span class="keyword">while</span> (i &lt; cats.length) &#123; <span class="comment">// 这里只有一个条件判断</span></span><br><span class="line">    info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">    i++; <span class="comment">// 更新变成了普通代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(info);</span><br></pre></td></tr></table></figure>
+
+<p>还有一个 do while 循环和它类似，不过条件判断是放在结尾的，也就是循环节结束之后判断是否继续循环。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">    i++;</span><br><span class="line">&#125; <span class="keyword">while</span> (i &lt; cats.length);</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这里我们了解了程序的循环结构，这是用来执行一些重复性工作的好办法。</p>
+<h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><p>现在回到开头的问题：请你帮助 GCVillager 把这个程序分别用 for, while, do while 循环实现。</p>
+<p>把一个斐波那契数组算到第 45 个，这里我们给出了前两个，你需要自己计算每个数，并且存到数组里面，最后输出整个数组。(下标从 0 开始！)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fibonacci = [<span class="number">1</span>, <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1782,241 +1936,6 @@
 <h2 id="结束了？"><a href="#结束了？" class="headerlink" title="结束了？"></a>结束了？</h2><p>“好像内容是结束了？那我是不是可以自己搭建一个网站了？”</p>
 <p>如果说是搭建一个初步的网站，那么的确是可以了。但是有的网站好像不是那么简单，比方说导航栏，侧栏，底栏这些，要怎么办？下面我们会举出更多例子。</p>
 <p>在更下面我们会把更加综合地讲解一下 HTML 和 CSS 的合作的例子，给大家一些网站的例子去讲解。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/ccc0076e1fcb/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="怺加冢穴计算机社团">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="怺加冢穴-博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/ccc0076e1fcb/" class="post-title-link" itemprop="url">进一步的 CSS</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-15 13:26:33" itemprop="dateCreated datePublished" datetime="2021-09-15T13:26:33+08:00">2021-09-15</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-01 12:07:37" itemprop="dateModified" datetime="2021-10-01T12:07:37+08:00">2021-10-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured</a></li>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance</a></li>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model</a></li>
-</ul>
-<p>现在，你应该已经很了解什么是 CSS 了，对于 CSS 的各种细节也有了一定的把握。我们这一节要告诉你怎么完整地使用 CSS 。</p>
-<h2 id="其他添加-CSS-的方法"><a href="#其他添加-CSS-的方法" class="headerlink" title="其他添加 CSS 的方法"></a>其他添加 CSS 的方法</h2><p>之前我们提到了另外两种方法的存在，现在也稍微提下。</p>
-<h3 id="内部-CSS"><a href="#内部-CSS" class="headerlink" title="内部 CSS"></a>内部 CSS</h3><p>在 HTML 的 <code>&lt;head&gt;</code> 里面用 <code>&lt;style&gt; &lt;/style&gt;</code> 来包裹你的 CSS。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>My CSS experiment<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: red;</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is my first CSS example<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在单文件的时候这个可能会比较方便，但是如果你的网站有很多 HTML ，一个个这么改过来不现实，所以看情况吧。</p>
-<h3 id="内联-CSS"><a href="#内联-CSS" class="headerlink" title="内联 CSS"></a>内联 CSS</h3><p>在单文件的时候这个可能会比较方便，但是如果你的网站有很多<br>内联 CSS 直接添加在元素上面。比如这样子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>My CSS experiment<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;color: blue;background-color: yellow;border: 1px solid black;&quot;</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color:red;&quot;</span>&gt;</span>This is my first CSS example<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>非常不建议这么做，一个个改元素会成为你的噩梦的。偷懒一时爽，维护火葬场，切记切记。</p>
-<h2 id="层叠与继承"><a href="#层叠与继承" class="headerlink" title="层叠与继承"></a>层叠与继承</h2><p>可能接下来的内容会偏向抽象一些，不过也是可以轻松理解的内容，对以后处理实际问题有很大帮助。</p>
-<h3 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h3><p>在写一个项目的时候，我们总是不可避免地会遇到一些问题，比如下面这个例子。</p>
-<p>现在有这样的一个元素：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;special&quot;</span>&gt;</span>What color am I?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后有这样的 CSS：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>或者 CSS 是这样的：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.special</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>请问它会变成什么样子？  </p>
-<p>我们立刻就会讲解这些细节。</p>
-<h3 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h3><p>CSS 元素的顺序很重要。浏览器在渲染 CSS 的时候，是从上到下进行解析的，同级的选择器指定的元素，如果样式发生了重复，就会使用后面的元素覆盖掉。就像涂颜料，前面都盖掉了，只有最后的才会看见。</p>
-<p>刚刚那个例子的第一个，就是典型的层叠。所以自然颜色就变成了黄色。</p>
-<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>那么第二个 CSS 要怎么处理呢，就要考虑<strong>优先级</strong>的问题了。</p>
-<p>一般情况下面，越特殊的选择器，优先级就越高。在这里，<code>.special</code> 作为一个类名选择器，比 <code>p</code> 这样的元素选择器更加特殊，所以优先级更高。CSS 内置的优先级比较复杂，就不详细展开了。</p>
-<p>当然以后这类问题实在不知道的话，可以自己直接在浏览器里面试一下。这也是常用的手段，比起看一些晦涩的文档，也不失为一种更好的选择。</p>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>有时候，子元素会<strong>继承</strong>父元素的一部分属性。最典型就就是 <code>font</code> 系列。比方说你写了这样的 HTML 和 CSS：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span> 我是一段文字，里面有<span class="tag">&lt;<span class="name">b</span>&gt;</span>粗体<span class="tag">&lt;/<span class="name">b</span>&gt;</span>，<span class="tag">&lt;<span class="name">i</span>&gt;</span>斜体<span class="tag">&lt;/<span class="name">i</span>&gt;</span>。 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: tahoma；/*这个是 Windows 默认字体*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>显然，里面的粗体和斜体都会和 <code>&lt;p&gt;</code> 中其他字有一样的字体。这样可以免掉很多麻烦。不过更加常用的方式就是直接给 <code>&lt;body&gt;</code> 设置这些属性，可以给包含在里面的全部内容继承。</p>
-<p>有些属性是不会继承的，是否继承之类的问题都会在文档里面写明，用到的时候查下文档就好。</p>
-<p>不想继承的话，一般是把这个属性覆盖了就好了，具体控制继承的方式，也可以看下文档。</p>
-<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><p>在 CSS 中，所有的元素都是套在<strong>盒子（box）</strong>里面的。盒子是渲染的基本单位，是处理元素的时候用到的。我们有时候有排版网页的需求，比方说放上一张图片，指定宽度高度，或者是一块一块地排上一些方格，比如写博客的时候一篇篇文章排下来之类的，都会用到盒子。</p>
-<p>盒子分成两种，<strong>块级盒子 (block box)</strong> 和 <strong>内联盒子 (inline box)</strong> 。</p>
-<p>让我们先开始了解盒模型。</p>
-<h3 id="盒模型-1"><a href="#盒模型-1" class="headerlink" title="盒模型"></a>盒模型</h3><p>完整的 CSS 盒模型，是盒子里面套着盒子的，这些不断嵌套的盒子构成了 CSS 的基本框架。从里到外包含这些部分：</p>
-<ul>
-<li>Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.</li>
-<li>Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 相关属性设置。</li>
-<li>Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。</li>
-<li>Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。</li>
-</ul>
-<p><img src="3_box-model.png" alt="Box Model"></p>
-<p>在标准模型中，如果你给盒设置 width 和 height，实际设置的是 content box, 也就是内容那个盒子。 padding 和 border 再加上设置的宽高才一起决定整个盒子的大小。比方说可以这样设置：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">350px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里最内层的 content box 是分别设置宽高的，而其他都指定宽度（相当于边框的粗细）。在页面中显示出来的是最内层和边框，别的相当于占着的空白。合起来在页面里面占的宽度是 350 + 25 + 25 + 5 + 5 = 410px，高度是 150 + 25 + 25 + 5 + 5 = 210px。</p>
-<blockquote>
-<p>margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫外边距折叠。</p>
-</blockquote>
-<p><img src="3_standard-box-model.png" alt="Standard Box"></p>
-<p>其实更好的方法是使用相对大小来设置，比如设置百分数 <code>50%</code> 或者相对字体的大小 <code>2em</code> 之类。因为这样可以在多种尺寸的屏幕上面显示地正常一些。具体可以从<strong>相应式布局</strong>了解有关细节。通常， <code>1em</code> 等于 <code>16px</code>。</p>
-<h3 id="块级盒子和内联盒子"><a href="#块级盒子和内联盒子" class="headerlink" title="块级盒子和内联盒子"></a>块级盒子和内联盒子</h3><p>这两种盒子会在<strong>页面流（page flow）</strong>和元素之间的关系方面表现出不同的行为:</p>
-<p>一个被定义成块级的（block）盒子会表现出以下行为:</p>
-<ul>
-<li>盒子会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，在绝大数情况下意味着盒子会和父容器一样宽</li>
-<li>每个盒子都会换行</li>
-<li>width 和 height 属性可以发挥作用</li>
-<li>内边距（padding）, 外边距（margin） 和 边框（border） 会将其他元素从当前盒子周围“推开”</li>
-</ul>
-<p>除非特殊指定，诸如标题( <code>&lt;h1&gt;</code>等)和段落(<code>&lt;p&gt;</code>)默认情况下都是块级的盒子。</p>
-<p>如果一个盒子对外显示为内联（inline），那么它的行为如下:</p>
-<ul>
-<li>盒子不会产生换行。</li>
-<li> width 和 height 属性将不起作用。</li>
-<li>垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline 状态的盒子推开。</li>
-<li>水平方向的内边距、外边距以及边框会被应用且会把其他处于 inline 状态的盒子推开。</li>
-</ul>
-<p>用做链接的 <code>&lt;a&gt;</code> 元素、 <code>&lt;span&gt;</code>、 <code>&lt;em&gt;</code> 以及 <code>&lt;strong&gt;</code> 都是默认处于 inline 状态的。</p>
-<p>我们通过对盒子 display 属性的设置，比如 inline 或者 block ，来控制盒子的外部显示类型。</p>
-<h3 id="盒子排版示例"><a href="#盒子排版示例" class="headerlink" title="盒子排版示例"></a>盒子排版示例</h3><p>现在我们看下一些关于 block box 的例子。</p>
-<p>第一个例子是一个段落，我们给它设置了边框。因为它是一个块级元素，所以它被换了个行。<br>第二个例子是一个列表，它被设置了一个 <code>display: flex</code>，意思是里面的元素按照弹性布局，所以里面的各个 <code>li</code> 就会被从左到右排成一行。不过它本身仍然是一个块，和段落一样，最外面也是换了一个行的。<br>第三个例子是演示内联元素如何变成块级。里面有两个 <span> 元素。正常情况下是 inline，但是其中一个加了 <code>block</code> 类，设置属性 <code>display: block</code>，成了块级元素。</p>
-<p><img src="3_css-block-box-show.png" alt="Example"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>, <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid rebeccapurple;</span><br><span class="line">  <span class="attribute">padding</span>: .<span class="number">5em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block</span>, <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid blue;</span><br><span class="line">  <span class="attribute">padding</span>: .<span class="number">5em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;          </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>I am a paragraph. A short one.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item One<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item Two<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item Three<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>I am another paragraph. Some of the <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;block&quot;</span>&gt;</span>words<span class="tag">&lt;/<span class="name">span</span>&gt;</span> have been wrapped in a <span class="tag">&lt;<span class="name">span</span>&gt;</span>span element<span class="tag">&lt;/<span class="name">span</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们可以看到 inline 元素在下面例子中的表现。 <code>&lt;span&gt;</code> 在第一段默认是内联元素所以不换行。<br>还有一个 <code>&lt;ul&gt;</code> 设置为 display: inline-flex，使得在一些flex元素外创建一个内联框，表现成内联。<br>最后设置两个段落为 display: inline。 inline flex 容器和段落在一行上而不是像块级元素一样换行。</p>
-<p><img src="3_css-inline-box.png" alt="Example2"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>, <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid rebeccapurple;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span>, <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-flex;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inline</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    I am a paragraph. Some of the</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>words<span class="tag">&lt;/<span class="name">span</span>&gt;</span> have been wrapped in a</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>span element<span class="tag">&lt;/<span class="name">span</span>&gt;</span>.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span>     </span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item One<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item Two<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item Three<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span>&gt;</span>I am a paragraph. A short one.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span>&gt;</span>I am another paragraph. Also a short one.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在后面的内容中会遇到诸如弹性盒子布局的内容；现在需要记住的是， display 属性可以改变盒子的外部显示类型是块级还是内联，这将会改变它与布局中的其他元素的显示方式。</p>
-<h2 id="再谈属性和值"><a href="#再谈属性和值" class="headerlink" title="再谈属性和值"></a>再谈属性和值</h2><p>我们之前已经了解过，CSS 的声明是由属性和值组成的。格式是 <code>属性: 值</code>。</p>
-<p>每个属性都有定义的值，对应特定的样式。</p>
-<p>如果属性未知或某个值对给定属性无效，则声明被视为无效，并被浏览器的 CSS 引擎完全忽略。</p>
-<p>接下来就要再提一下属性，讲一些之前没有提到的内容。</p>
-<h3 id="一些重要属性"><a href="#一些重要属性" class="headerlink" title="一些重要属性"></a>一些重要属性</h3><p>试试看这些属性吧，查找 MDN 的文档，并且试着使用它们。</p>
-<ul>
-<li>font-size</li>
-<li>width</li>
-<li>background-color</li>
-<li>color</li>
-<li>border</li>
-</ul>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>虽然大多数值是相对简单的关键字或数值，但也有一些可能的值以函数的形式出现。函数由函数名和括号组成，括号内是函数的参数。比如我们之前提到的 <code>color</code> 里面的 <code>rgba()</code> 就是一个很典型的 CSS 函数。这里我们演示一下 <code>calc()</code> 函数。这个函数允许您在 CSS 中进行简单的计算，例如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>The inner box is 90% - 30px.<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.outer</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">90%</span> - <span class="number">30px</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: rebeccapurple;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="3_css-calc.png" alt="Calc"></p>
-<p>在上面的 <code>calc()</code> 示例中，我要求此框的宽度为包含块宽度的 90% ，减去 30 像素。这不是我可以提前计算的东西，只是在 CSS 中输入值，因为我不知道 90% 会是什么。MDN 上的相关页面将有使用示例，这样您就可以看到函数是如何工作的。</p>
-<p>还有 <code>transform</code>, <code>background-image</code>, <code>color</code> 这些也用了函数，可以看文档了解一下。</p>
-<h3 id="规则"><a href="#规则" class="headerlink" title="@规则"></a>@规则</h3><p>到目前为止，我们还没有遇到 <code>@rules</code> (读音 “at-rules”)。 这是一些特殊的规则，为 CSS 提供了一些关于如何表现的指导。 有些 <code>@rules</code> 规则很简单，只有规则名和值。例如，要将额外的样式表 (假定叫做 <code>styles2.css</code> ) 导入主 CSS 样式表，可以使用 <code>@import</code>:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;styles2.css&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>最常见的 <code>@rules</code> 之一是 <code>@media</code> ，它允许您使用 媒体查询 来应用 CSS。意思是仅当某些条件成立(例如，当屏幕分辨率高于某一数量，或屏幕宽度大于某一宽度时)的时候才会用到这个规则。这样可以用来适应不同的设备（比如竖屏和横屏）。</p>
-<p>在下面的 CSS 中，我们将给 <code>&lt;body&gt;</code> 元素一个粉红色的背景色。但是，我们随后使用 <code>@media</code> 创建样式表的一个部分，该部分仅适用于视口大于 30em 的浏览器。如果浏览器的宽度大于 30em，则背景色将为蓝色。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">30em</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="速记属性"><a href="#速记属性" class="headerlink" title="速记属性"></a>速记属性</h3><p>有时候一个个指定属性是一件很烦的事情，现在我要设置一个 padding 的上下左右边距：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>CSS 本就有些无聊，要是再加上这些杂七杂八的东西不会乱成一团就怪了。好在为了程序员们的眼睛和头发，有个叫做<strong>速记属性</strong>的东西。它可以使代码更整洁，也节约你的打字时间。上面的例子可以打成这样：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">15px</span> <span class="number">15px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>警告：虽然速记经常允许您忽略值，但它们会将不包含的任何值重置为它们的初始值。这确保使用了一组合理的值。但是，如果您期望速记只更改传入的值，这可能会使您感到困惑。</p>
-</blockquote>
-<h2 id="注释和空白"><a href="#注释和空白" class="headerlink" title="注释和空白"></a>注释和空白</h2><p>CSS 中的注释以 <code>/*</code> 开头，以 <code>*/</code> 结尾。注释内容不会被 CSS 渲染。</p>
-<p>添加注释是一件有用的事情，这样做可以帮助您在过了几个月后回来修改或优化代码时了解它们是如何工作的，同时也便于其他人理解您的代码。有时候测试的时候也会把一些属性包在注释里面禁用掉，用来排除干扰，也就是常说的“注释掉”。</p>
-<p>比如这就是典型的用法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*.special &#123;</span></span><br><span class="line"><span class="comment">  color: red;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>空白是指实际空格、制表符和换行。以与 HTML 相同的方式，浏览器往往忽略 CSS 中的大部分空白；许多空白只是为了提高可读性。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本章内容有点多有点杂，在此稍微梳理一下。</p>
-<p>应用 CSS 有三种方法。外部 CSS，内部 CSS， 内联 CSS。推荐使用的是外部 CSS，因为方便维护和复用。</p>
-<p>如果多个选择器选中了同一个元素，这些选择器跟着的规则也发生冲突的话，CSS 将会根据优先级处理。通常是后面的覆盖前面的，特殊的覆盖一般的，最后显示出来网页的样子。  </p>
-<p>CSS 在渲染的时候使用盒模型，这个模型把元素看成是一个一个的盒子，将它们排布起来。盒子分成两种，一种是块级盒子，另一种是内联盒子。块级盒子通常会自带换行，并且拥有完整的边框。</p>
-<p>属性除了普通的值，还可以有函数。函数通常指定一些比较复杂的逻辑。除了普通的属性之外，还有 @ 属性，用来进行一些特殊的操作。</p>
-<p>空白和注释是让 CSS 提高可读性的重要方式。</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>现在你应该知道了 CSS 的一些工作原理，下面我们就进入实战部分吧。</p>
-<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>下面就是实战了，我也不想搞练习，就跳过吧。</p>
 
       
     </div>
