@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="/lib/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/lib/animate.css/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;yjzxclub.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}">
+<meta name="description" content="创建一个Github RepositoryRepository，有人译为仓库。我们就叫它仓库好了，或者称为repo，因为单词我不会拼。 首先我们需要创建一个仓库，登录你的账号，点击右上角的“+”号，在出现的页面里点击“New repository”，然后就会出现创建仓库的页面。  如图，在这个界面里： 第一个框写repo的名字，要求不能与自己已有的repo重名。可以起一个很响亮的名字。 也可以：“">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2：开始使用Git">
+<meta property="og:url" content="https://yjzxclub.github.io/b282b9906b92/index.html">
+<meta property="og:site_name" content="怺加冢穴-博客">
+<meta property="og:description" content="创建一个Github RepositoryRepository，有人译为仓库。我们就叫它仓库好了，或者称为repo，因为单词我不会拼。 首先我们需要创建一个仓库，登录你的账号，点击右上角的“+”号，在出现的页面里点击“New repository”，然后就会出现创建仓库的页面。  如图，在这个界面里： 第一个框写repo的名字，要求不能与自己已有的repo重名。可以起一个很响亮的名字。 也可以：“">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yjzxclub.github.io/b282b9906b92/create-repo.png">
+<meta property="article:published_time" content="2022-02-16T08:23:11.000Z">
+<meta property="article:modified_time" content="2022-02-16T08:46:12.220Z">
+<meta property="article:author" content="怺加冢穴计算机社团">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yjzxclub.github.io/b282b9906b92/create-repo.png">
+
+
+<link rel="canonical" href="https://yjzxclub.github.io/b282b9906b92/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content="">
+<title>2：开始使用Git | 怺加冢穴-博客</title><script data-pjax src="/js/load-config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">怺加冢穴-博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/custom_logo.png" alt="怺加冢穴-博客">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-教程"><a href="/categories/%E6%95%99%E7%A8%8B/" rel="section"><i class="fa fa-book fa-fw"></i>教程</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAGithub-Repository"><span class="nav-number">1.</span> <span class="nav-text">创建一个Github Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">clone仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9"><span class="nav-number">3.</span> <span class="nav-text">提交更改</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">怺加冢穴计算机社团</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/b282b9906b92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2：开始使用Git
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-16 16:23:11 / 修改时间：16:46:12" itemprop="dateCreated datePublished" datetime="2022-02-16T16:23:11+08:00">2022-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/GCVillager/" itemprop="url" rel="index"><span itemprop="name">GCVillager</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="创建一个Github-Repository"><a href="#创建一个Github-Repository" class="headerlink" title="创建一个Github Repository"></a>创建一个Github Repository</h2><p>Repository，有人译为仓库。我们就叫它仓库好了，或者称为repo，因为单词我不会拼。</p>
+<p>首先我们需要创建一个仓库，登录你的账号，点击右上角的“+”号，在出现的页面里点击“New repository”，然后就会出现创建仓库的页面。</p>
+<p><img src="create-repo.png" alt="创建仓库"></p>
+<p>如图，在这个界面里：</p>
+<p>第一个框写repo的名字，要求不能与自己已有的repo重名。可以起一个很响亮的名字。 <del>也可以：“好过分！我要给它取一个很难听的名字！”</del> 由于我们现在的教学是以搭建github博客为主题的，所以建议你命名为：[你的Github用户名].github.io。当然，其他时候就随便命名。</p>
+<p>第二个框是简介，可以让人看到你这个仓库的时候更快知道这是什么。可以不写。</p>
+<p>第三个框是选择仓库是公开还是私有。如果公开，所有人都可以看到源码；如果私有，只有自己和被自己邀请的人能看到。私有仓库有一些限制。</p>
+<p>为了使用方便，我们把“Add a README file”点起来。就是第四个框的内容。</p>
+<p>第五个框，完成之前的内容后，点击就可以创建一个新的repo。</p>
+<p>于是你的账号下面就有了一个repo。现在，访问<a target="_blank" rel="noopener" href="https://github.com/[%E7%94%A8%E6%88%B7%E5%90%8D]/[repo%E5%90%8D]%E5%8D%B3%E5%8F%AF%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E4%BB%93%E5%BA%93%E3%80%82%E6%AD%A4%E5%88%BB%EF%BC%8C%E4%BD%A0%E7%9A%84%E4%BB%93%E5%BA%93%E9%87%8C%E7%A9%BA%E7%A9%BA%E5%A6%82%E4%B9%9F%EF%BC%8C%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AAREADME%E6%96%87%E4%BB%B6%E3%80%82">https://github.com/[用户名]/[repo名]即可看到你的仓库。此刻，你的仓库里空空如也，只有一个README文件。</a></p>
+<h2 id="clone仓库"><a href="#clone仓库" class="headerlink" title="clone仓库"></a>clone仓库</h2><p>现在我们的仓库在Github上托管着。我们需要把仓库下到本地来。</p>
+<p>你可能会问：Github上不是可以直接修改吗？为什么不直接那么做？因为有的时候我们需要一次性执行大量更改，直接在Github上改可能会导致历史版本非常混乱。再说，直接在本地改，可以用功能更强大的软件，不是更好吗？</p>
+<p>于是我们回到把仓库clone下来这个主题上。找到你希望存仓库的地方，右键，Git Bash Here。现在出来一个黑框框了。此黑框者，人称 Git Bash 。输入以下命令：</p>
+<p>$ <code>git clone https://github.com/[用户名]/[repo名].git</code></p>
+<p>比如说我的用户名是GCVillager，仓库名是GCVillager.github.io，就输入这个指令：</p>
+<p>$ <code>git clone https://github.com/GCVillager/GCVillager.github.io.git</code></p>
+<p>然后它就会开始 高 速 下 载</p>
+<p>接下来，原先那个文件夹里就会多出来一个文件夹，名字和你的仓库名是一样的。你可以直接在刚刚用的那个 Bash 里输入这样的指令，进入这个新出现的文件夹里：</p>
+<p>$ <code>cd [路径名]</code></p>
+<p>你也可以在系统里进入这个文件夹，再打开一个新的 Git Bash 。</p>
+<h2 id="提交更改"><a href="#提交更改" class="headerlink" title="提交更改"></a>提交更改</h2><p>假设你在里面加了你要加的文件，现在要把这个仓库提交到 Github 上，该怎么做呢？<br>在 Git Bash 里输入这样一串玩意：</p>
+<p>$ <code>git add .</code><br>$ <code>git commit -m &quot;[一段关于这次更改的描述]&quot;</code><br>$ <code>git push</code>  </p>
+<p>于是你的玩意就会开始 高 速 上 传 。完成之后，再去 Github 上看，就能看到你的仓库的更新内容了。</p>
+<p>不过既然 Git 是有多人合作的用途的，如果你 clone 仓库之后，有人更改过 Github 上的内容了，你 push 上去岂不是会覆盖别人的内容？我们需要在这三道指令最前面加上这样一道：</p>
+<p>$ <code>git pull</code></p>
+<p>这指令会将远端的内容同步过来，并合并。你在本地的修改当然不会丢失。这样就完成了多人协作的目的。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>GCVillager
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yjzxclub.github.io/b282b9906b92/" title="2：开始使用Git">https://yjzxclub.github.io/b282b9906b92/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/3abc577e0e83/" rel="prev" title="第一学期期末活动计划">
+                  <i class="fa fa-chevron-left"></i> 第一学期期末活动计划
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/967239b962b5/" rel="next" title="使用Github Pages搭建个人博客">
+                  使用Github Pages搭建个人博客 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="yjzxclub/yjzxclub.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNTIyMDg5MDY="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOFP5ICs4CUzje"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script><script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">怺加冢穴计算机社团</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="/lib/animejs/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

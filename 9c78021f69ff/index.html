@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="/lib/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/lib/animate.css/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;yjzxclub.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}">
+<meta name="description" content="本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:  https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;learn&#x2F;JavaScript&#x2F;Building_blocks&#x2F;Looping_code https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Guide&#x2F;Loops">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS —— 循环结构">
+<meta property="og:url" content="https://yjzxclub.github.io/9c78021f69ff/index.html">
+<meta property="og:site_name" content="怺加冢穴-博客">
+<meta property="og:description" content="本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:  https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;learn&#x2F;JavaScript&#x2F;Building_blocks&#x2F;Looping_code https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Guide&#x2F;Loops">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-28T00:35:00.000Z">
+<meta property="article:modified_time" content="2021-10-28T00:46:42.834Z">
+<meta property="article:author" content="怺加冢穴计算机社团">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="JS">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yjzxclub.github.io/9c78021f69ff/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content="">
+<title>JS —— 循环结构 | 怺加冢穴-博客</title><script data-pjax src="/js/load-config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">怺加冢穴-博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/custom_logo.png" alt="怺加冢穴-博客">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-教程"><a href="/categories/%E6%95%99%E7%A8%8B/" rel="section"><i class="fa fa-book fa-fw"></i>教程</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#for-%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.</span> <span class="nav-text">for 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-break-%E9%80%80%E5%87%BA%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.</span> <span class="nav-text">使用 break 退出循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-continue-%E8%B7%B3%E8%BF%87%E8%BF%AD%E4%BB%A3"><span class="nav-number">3.</span> <span class="nav-text">使用 continue 跳过迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while-%E5%92%8C-do-while-%E5%BE%AA%E7%8E%AF"><span class="nav-number">4.</span> <span class="nav-text">while 和 do while 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0"><span class="nav-number">6.</span> <span class="nav-text">编程练习</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">怺加冢穴计算机社团</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yjzxclub.github.io/9c78021f69ff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="怺加冢穴计算机社团">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="怺加冢穴-博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JS —— 循环结构
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-28 08:35:00 / 修改时间：08:46:42" itemprop="dateCreated datePublished" datetime="2021-10-28T08:35:00+08:00">2021-10-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/" itemprop="url" rel="index"><span itemprop="name">计算机社</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A4%BE/%E5%B0%BC%E6%B3%BD%C2%B7%E8%8E%AB%E4%BC%AF%E6%96%AF/" itemprop="url" rel="index"><span itemprop="name">尼泽·莫伯斯</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文按照 Mozilla 贡献者基于 CC-BY-SA 2.5 协议发布的以下文章改编:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code">https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration</a></li>
+</ul>
+<p>有时候，我们需要完成一些重复的任务。比方说，现在我要按顺序输出 1 到 32 这些数字，要怎么做？曾经有个伟大的 GCVillager 手动写下了 32 行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">6</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">7</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">8</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">9</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">10</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">11</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">12</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">13</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">14</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">15</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">16</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">17</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">18</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">19</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">20</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">21</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">22</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">23</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">24</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">25</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">26</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">27</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">28</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">29</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">30</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">31</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">32</span>);</span><br></pre></td></tr></table></figure>
+
+<p>我们肯定不能学他，毕竟要输出 1145141919810 行怎么办？所以就有了今天的主角——循环结构。</p>
+<h2 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h2><p>下面这个代码就可以解决开头的问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123; <span class="comment">// 还记得自增运算符吧</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i+<span class="number">1</span>); <span class="comment">// 想想为什么加一</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以这样看到循环的结构是这样的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (初始化语句; 退出条件; 更新语句) &#123;</span><br><span class="line">    一些需要执行的代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到这里的基本结构</p>
+<ol>
+<li>关键字for，后跟一些括号。</li>
+<li>在括号内，我们有三个项目，以分号分隔：<ul>
+<li>初始化语句 - 通常我们会在这里声明一个数字变量，这个变量可以配合后面的更新语句来统计循环当前执行了的次数。它也有时被称为计数变量。</li>
+<li>退出条件 - 用来定义怎么退出循环。这个语句在每轮循环之前都会判断，如果满足条件就进入循环，如果不满足这个条件就退出循环。</li>
+<li>更新语句 - 在每轮循环结束的时候执行。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。</li>
+</ul>
+</li>
+<li>包含一些代码的花括号 - 每次循环时都会运行花括号里面的代码。</li>
+</ol>
+<p>那么我们看下下面的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> info = <span class="string">&#x27;My cats are called &#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(info);</span><br></pre></td></tr></table></figure>
+
+<p>这里每次都把 cats 里面的元素加到 info 的末尾，输出就是这样:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>迭代器i从0开始（<code>let i = 0</code>）。</li>
+<li>循环将会一直运行直到 i 不再小于 cats 数组的长度(<code>cats.length</code>)。</li>
+<li>在循环中，我们将当前的 <code>cats[i]</code> 以及逗号和空格拼接 (<code>+=</code>)到 info 变量的末尾。 所以：<ul>
+<li>在第一次运行中，i 为 0，所以 <code>cats[0] +&#39;，&#39;</code> 将被拼接到 info 上。</li>
+<li>在第二次运行中，i 为 1，所以 <code>cats[1] +&#39;，&#39;</code> 将被拼接到 info 上。</li>
+<li>每次循环运行后，i 都会加上 1，然后进程将再次启动，直到退出条件。</li>
+</ul>
+</li>
+<li>当等于 <code>cats.length</code> 时，循环将停止，浏览器将移动到循环下面的下一个代码位。</li>
+</ul>
+<h2 id="使用-break-退出循环"><a href="#使用-break-退出循环" class="headerlink" title="使用 break 退出循环"></a>使用 break 退出循环</h2><p>在循环当中，我们有时候需要在中途退出。还是上面的例子，如果我们需要找到 <code>cats</code> 数组里面的 Jeff 这个名字所在的下标，找到就退出，那可能就要写成这样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> cur;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&#x27;Jeff&#x27;</span> === cats[i] ) &#123;</span><br><span class="line">        cur = i;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cur);</span><br></pre></td></tr></table></figure>
+
+<p>输出就是</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i = 0</span><br><span class="line">i = 1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>其中循环执行到 <code>i = 1</code> 的时候，循环就因为满足了 if 的条件，然后被 break 语句退出了，没有执行到 <code>i &lt; cats.length</code> 这个条件。</p>
+<h2 id="使用-continue-跳过迭代"><a href="#使用-continue-跳过迭代" class="headerlink" title="使用 continue 跳过迭代"></a>使用 continue 跳过迭代</h2><p>continue语句以类似的方式工作，而不是完全跳出循环，而是跳过当前循环的下面部分，直接进入执行下一个循环。</p>
+<p>比如说我们需要在遇到名字 <code>Jeff</code> 的时候不输出，就可以这么实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cats.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&#x27;Jeff&#x27;</span> === cats[i] ) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(cats[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Bill</span><br><span class="line">Pete</span><br><span class="line">Biggles</span><br><span class="line">Jasmin</span><br></pre></td></tr></table></figure>
+
+<p>这里在名称是 <code>Jeff</code> 的时候，<code>continue</code> 语句被执行，导致了后面的语句跳过去了，所以只有 <code>Jeff</code> 没有输出。</p>
+<h2 id="while-和-do-while-循环"><a href="#while-和-do-while-循环" class="headerlink" title="while 和 do while 循环"></a>while 和 do while 循环</h2><p>除了 for 循环之外， JS 还有两种循环：while 和 do while 循环。while 循环只有在入口处包含一个条件判断语句，如果满足就会进入循环。</p>
+<p>比如之前的那个打印 cats 数组内容的程序，使用 while 循环我们就可以写成这个样子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cats = [<span class="string">&#x27;Bill&#x27;</span>, <span class="string">&#x27;Jeff&#x27;</span>, <span class="string">&#x27;Pete&#x27;</span>, <span class="string">&#x27;Biggles&#x27;</span>, <span class="string">&#x27;Jasmin&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> info = <span class="string">&#x27;My cats are called &#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;<span class="comment">// 初始化语句被放在外面了，成了一个普通的声明变量</span></span><br><span class="line"><span class="keyword">while</span> (i &lt; cats.<span class="property">length</span>) &#123; <span class="comment">// 这里只有一个条件判断</span></span><br><span class="line">    info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">    i++; <span class="comment">// 更新变成了普通代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(info);</span><br></pre></td></tr></table></figure>
+
+<p>还有一个 do while 循环和它类似，不过条件判断是放在结尾的，也就是循环节结束之后判断是否继续循环。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    info += cats[i] + <span class="string">&#x27;, &#x27;</span>;</span><br><span class="line">    i++;</span><br><span class="line">&#125; <span class="keyword">while</span> (i &lt; cats.<span class="property">length</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这里我们了解了程序的循环结构，这是用来执行一些重复性工作的好办法。</p>
+<h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><p>现在回到开头的问题：请你帮助 GCVillager 把这个程序分别用 for, while, do while 循环实现。</p>
+<p>把一个斐波那契数组算到第 45 个，这里我们给出了前两个，你需要自己计算每个数，并且存到数组里面，最后输出整个数组。(下标从 0 开始！)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fibonacci = [<span class="number">1</span>, <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>尼泽·莫伯斯
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yjzxclub.github.io/9c78021f69ff/" title="JS —— 循环结构">https://yjzxclub.github.io/9c78021f69ff/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/JS/" rel="tag"># JS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/6a770fa64bf2/" rel="prev" title="JS —— 分支结构">
+                  <i class="fa fa-chevron-left"></i> JS —— 分支结构
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/34a17b1e6b3b/" rel="next" title="JS —— 函数和方法">
+                  JS —— 函数和方法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="yjzxclub/yjzxclub.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNTIyMDg5MDY="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOFP5ICs4CUzje"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script><script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">怺加冢穴计算机社团</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="/lib/animejs/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
